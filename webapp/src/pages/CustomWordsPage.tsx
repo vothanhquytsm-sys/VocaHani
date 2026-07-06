@@ -33,6 +33,10 @@ export const CustomWordsPage: React.FC = () => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingWord, setEditingWord] = useState<Word | null>(null);
 
+  const [showBatchModal, setShowBatchModal] = useState(false);
+  const [batchInput, setBatchInput] = useState('');
+  const [batchLoading, setBatchLoading] = useState(false);
+
   // Form states
   const [wordText, setWordText] = useState('');
   const [ipaText, setIpaText] = useState('');
@@ -76,6 +80,61 @@ export const CustomWordsPage: React.FC = () => {
       console.error(e);
     } finally {
       setLookupLoading(false);
+    }
+  };
+
+  const handleBatchImportSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!batchInput.trim()) return;
+
+    setBatchLoading(true);
+    const lines = batchInput.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+    const wordsToImport: Partial<Word>[] = [];
+
+    try {
+      await Promise.all(
+        lines.map(async line => {
+          let word = line;
+          let customMeaning = '';
+
+          const separatorMatch = line.match(/^([^|:-]+)[|:-](.+)$/);
+          if (separatorMatch) {
+            word = separatorMatch[1].trim();
+            customMeaning = separatorMatch[2].trim();
+          }
+
+          try {
+            const res = await lookupDictionary(word);
+            wordsToImport.push({
+              word,
+              ipa: res.ipa || '/.../',
+              vietnameseMeaning: customMeaning || res.vietnameseMeaning || 'Nghĩa trống',
+              exampleEnglish: res.exampleEnglish || '',
+              exampleVietnamese: res.exampleVietnamese || '',
+              topic: 'Nhập hàng loạt',
+              level: 'A1'
+            });
+          } catch (err) {
+            wordsToImport.push({
+              word,
+              ipa: '/.../',
+              vietnameseMeaning: customMeaning || 'Không tìm thấy định nghĩa',
+              exampleEnglish: '',
+              exampleVietnamese: '',
+              topic: 'Nhập hàng loạt',
+              level: 'A1'
+            });
+          }
+        })
+      );
+
+      importCustomWords(wordsToImport);
+      setShowBatchModal(false);
+      setBatchInput('');
+    } catch (err) {
+      console.error('Batch import error:', err);
+    } finally {
+      setBatchLoading(false);
     }
   };
 
@@ -189,6 +248,11 @@ export const CustomWordsPage: React.FC = () => {
           <button onClick={handleOpenAdd} style={{ display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: 'var(--accent)', color: 'white', border: 'none', padding: '10px 16px', borderRadius: '12px', fontSize: '13px', fontWeight: 700, cursor: 'pointer' }}>
             <Plus size={16} />
             <span>Thêm từ</span>
+          </button>
+
+          <button onClick={() => setShowBatchModal(true)} style={{ display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border)', color: 'var(--text)', padding: '10px 16px', borderRadius: '12px', fontSize: '13px', fontWeight: 700, cursor: 'pointer' }}>
+            <Plus size={16} />
+            <span>Nhập hàng loạt</span>
           </button>
 
           <button onClick={() => fileInputRef.current?.click()} style={{ display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border)', color: 'var(--text)', padding: '10px 16px', borderRadius: '12px', fontSize: '13px', fontWeight: 700, cursor: 'pointer' }}>
@@ -483,6 +547,127 @@ export const CustomWordsPage: React.FC = () => {
                 }}
               >
                 {editingWord ? 'Cập nhật thay đổi' : 'Lưu từ vựng'}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {showBatchModal && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 100,
+            padding: '20px'
+          }}
+          onClick={() => setShowBatchModal(false)}
+        >
+          <div
+            onClick={e => e.stopPropagation()}
+            className="glass"
+            style={{
+              width: '100%',
+              maxWidth: '500px',
+              borderRadius: '24px',
+              border: '1px solid var(--border)',
+              padding: '28px',
+              boxShadow: 'var(--card-shadow)',
+              textAlign: 'left',
+              position: 'relative'
+            }}
+          >
+            <button
+              onClick={() => setShowBatchModal(false)}
+              style={{
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                background: 'transparent',
+                border: 'none',
+                color: 'var(--text-muted)',
+                cursor: 'pointer',
+                padding: '4px',
+                borderRadius: '50%'
+              }}
+            >
+              <X size={18} />
+            </button>
+
+            <h3 className="font-heading" style={{ fontSize: '20px', fontWeight: 900, color: 'var(--text-bold)', marginBottom: '6px' }}>
+              Nhập từ vựng hàng loạt
+            </h3>
+            <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '16px', lineHeight: '1.4' }}>
+              Nhập mỗi từ một dòng. Bạn có thể nhập theo định dạng tự do:<br />
+              <b>Cách 1:</b> <code>từ_tiếng_anh</code> (Hệ thống tự động tra định nghĩa & ví dụ online)<br />
+              <b>Cách 2:</b> <code>từ_tiếng_anh | nghĩa_tiếng_việt</code> (Hỗ trợ phân tách bằng <code>|</code>, <code>-</code> hoặc <code>:</code>)
+            </p>
+
+            <form onSubmit={handleBatchImportSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '6px' }}>
+                  Danh sách từ vựng (mỗi từ một dòng)
+                </label>
+                <textarea
+                  required
+                  rows={8}
+                  placeholder={`Ví dụ:\napple\nbanana | quả chuối\ncat - con mèo\ndog : con chó`}
+                  value={batchInput}
+                  onChange={e => setBatchInput(e.target.value)}
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    borderRadius: '12px',
+                    border: '1px solid var(--border)',
+                    backgroundColor: 'var(--bg)',
+                    color: 'var(--text-bold)',
+                    fontFamily: 'monospace',
+                    fontSize: '14px',
+                    outline: 'none',
+                    resize: 'vertical'
+                  }}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={batchLoading}
+                className="font-heading"
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%)',
+                  color: 'white',
+                  border: 'none',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  cursor: batchLoading ? 'not-allowed' : 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px'
+                }}
+              >
+                {batchLoading ? (
+                  <>
+                    <div style={{
+                      width: '16px',
+                      height: '16px',
+                      border: '2px solid rgba(255,255,255,0.3)',
+                      borderTopColor: 'white',
+                      borderRadius: '50%',
+                      animation: 'pulseGlow 1s infinite'
+                    }} />
+                    <span>Đang tra cứu từ điển online...</span>
+                  </>
+                ) : (
+                  <span>Bắt đầu nhập từ</span>
+                )}
               </button>
             </form>
           </div>
