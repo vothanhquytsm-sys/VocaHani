@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useVocabulary } from '../context/VocabularyContext';
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis';
-import { ArrowLeft, RotateCw, RefreshCw } from 'lucide-react';
+import { ArrowLeft, RotateCw, RefreshCw, Volume2 } from 'lucide-react';
 import { type Word } from '../types/Word';
 
 interface FlashcardPageProps {
@@ -309,8 +309,25 @@ export const FlashcardPage: React.FC<FlashcardPageProps> = ({ topicName, lessonI
               </span>
 
               <span style={{ fontSize: '3rem', marginBottom: '16px' }}>📖</span>
-              <h2 className="font-heading" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--text-bold)', letterSpacing: '-1px' }}>
-                {activeWord.word}
+              <h2 className="font-heading" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--text-bold)', letterSpacing: '-1px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                <span>{activeWord.word}</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    speak(activeWord.word);
+                  }}
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    color: 'var(--accent)',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    padding: '4px',
+                    borderRadius: '50%'
+                  }}
+                >
+                  <Volume2 size={22} />
+                </button>
               </h2>
               <span style={{ fontSize: '15px', color: 'var(--text-muted)', fontWeight: 600, marginTop: '4px' }}>
                 {activeWord.ipa}
