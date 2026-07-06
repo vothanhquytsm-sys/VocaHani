@@ -1,0 +1,10 @@
+{
+  "name": "vocahani-root",
+  "version": "1.0.0",
+  "description": "Root orchestrator for VocaHani iOS and Web app",
+  "scripts": {
+    "build": "npm run build --prefix webapp && npm run build --prefix server",
+    "start": "npm start --prefix server",
+    "install:all": "npm install --prefix webapp && npm install --prefix server"
+  }
+}

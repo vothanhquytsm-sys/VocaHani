@@ -1,0 +1,12 @@
+.git
+.gemini
+HaniVoca/Resources/tudien.db
+HaniVoca.xcodeproj/project.xcworkspace
+webapp/node_modules
+webapp/dist
+server/node_modules
+server/dist
+voca_users.db
+voca_users.db-journal
+voca_users.db-wal
+*.log

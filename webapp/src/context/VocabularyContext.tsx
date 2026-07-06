@@ -15,6 +15,7 @@ interface VocabularyContextType {
   passedLessons: string[];
   completedReadings: Record<string, number>;
   loading: boolean;
+  user: { username: string; token: string } | null;
   
   toggleLearned: (wordId: string) => void;
   toggleFavorite: (wordId: string) => void;
@@ -27,6 +28,8 @@ interface VocabularyContextType {
   passLesson: (topicName: string, lessonIndex: number) => void;
   resetLessonProgress: () => void;
   importCustomWords: (imported: Partial<Word>[]) => void;
+  loginUser: (username: string, token: string) => void;
+  logoutUser: () => void;
 }
 
 const VocabularyContext = createContext<VocabularyContextType | undefined>(undefined);
@@ -34,6 +37,12 @@ const VocabularyContext = createContext<VocabularyContextType | undefined>(undef
 export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   
+  // Auth State
+  const [user, setUser] = useState<{ username: string; token: string } | null>(() => {
+    const item = localStorage.getItem('voca_user_session');
+    return item ? JSON.parse(item) : null;
+  });
+
   // Master lists loaded from public JSON assets
   const [baseWords, setBaseWords] = useState<Word[]>([]);
   const [basePhrases, setBasePhrases] = useState<Phrase[]>([]);
@@ -326,6 +335,80 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     setCustomWords(prev => [...prev, ...wordsToAdd]);
   }, []);
 
+  const loginUser = useCallback((username: string, token: string) => {
+    const session = { username, token };
+    setUser(session);
+    localStorage.setItem('voca_user_session', JSON.stringify(session));
+  }, []);
+
+  const logoutUser = useCallback(() => {
+    setUser(null);
+    localStorage.removeItem('voca_user_session');
+    resetLessonProgress();
+  }, [resetLessonProgress]);
+
+  // Sync Pull Effect (Runs on Login/App Boot)
+  useEffect(() => {
+    const pullProgress = async () => {
+      if (!user) return;
+      try {
+        const res = await fetch('/api/sync/pull', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${user.token}`
+          }
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setCustomWords(data.customWords || []);
+          setLearnedWordIds(data.learnedWordIds || []);
+          setFavoriteWordIds(data.favoriteWordIds || []);
+          setFavoritePhraseIds(data.favoritePhraseIds || []);
+          setPassedLessons(data.passedLessons || []);
+          setCompletedReadings(data.completedReadings || {});
+          setSrsMap(data.srsMap || {});
+        }
+      } catch (err) {
+        console.error('Failed to pull progress from server:', err);
+      }
+    };
+    pullProgress();
+  }, [user]);
+
+  // Sync Push Effect (Debounced saving)
+  useEffect(() => {
+    if (!user) return;
+
+    const pushData = async () => {
+      try {
+        await fetch('/api/sync/push', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${user.token}`
+          },
+          body: JSON.stringify({
+            learnedWordIds,
+            favoriteWordIds,
+            favoritePhraseIds,
+            passedLessons,
+            completedReadings,
+            srsMap,
+            customWords
+          })
+        });
+      } catch (err) {
+        console.error('Failed to sync progress to server:', err);
+      }
+    };
+
+    const timer = setTimeout(() => {
+      pushData();
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, [user, learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, customWords]);
+
   return (
     <VocabularyContext.Provider
       value={{
@@ -349,7 +432,10 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         saveReadingScore,
         passLesson,
         resetLessonProgress,
-        importCustomWords
+        importCustomWords,
+        user,
+        loginUser,
+        logoutUser
       }}
     >
       {children}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { VocabularyProvider } from './context/VocabularyContext';
+import { VocabularyProvider, useVocabulary } from './context/VocabularyContext';
 import { Layout } from './components/Layout/Layout';
+import { AuthModal } from './components/AuthModal';
 import { TopicsPage } from './pages/TopicsPage';
 import { WordListPage } from './pages/WordListPage';
 import { WordDetailPage } from './pages/WordDetailPage';
@@ -30,6 +31,8 @@ type ActivePage =
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<ActivePage>({ type: 'topics' });
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const { loginUser } = useVocabulary();
 
   const renderActivePage = () => {
     switch (currentPage.type) {
@@ -88,8 +91,18 @@ function AppContent() {
   };
 
   return (
-    <Layout currentPage={currentPage} setPage={setCurrentPage}>
+    <Layout currentPage={currentPage} setPage={setCurrentPage} onLoginClick={() => setShowLoginModal(true)}>
       {renderActivePage()}
+
+      {showLoginModal && (
+        <AuthModal
+          onClose={() => setShowLoginModal(false)}
+          onLoginSuccess={(username, token) => {
+            loginUser(username, token);
+            setShowLoginModal(false);
+          }}
+        />
+      )}
     </Layout>
   );
 }
