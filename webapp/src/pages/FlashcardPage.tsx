@@ -92,6 +92,10 @@ export const FlashcardPage: React.FC<FlashcardPageProps> = ({ topicName, lessonI
 
   // Pointer drag/swipe events
   const handlePointerDown = (e: React.PointerEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('.speaker-btn') || target.closest('button')) {
+      return; // Ignore pointer dragging when clicking button controls
+    }
     setIsDragging(true);
     dragStart.current = { x: e.clientX, y: e.clientY };
     try {
@@ -312,6 +316,7 @@ export const FlashcardPage: React.FC<FlashcardPageProps> = ({ topicName, lessonI
               <h2 className="font-heading" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--text-bold)', letterSpacing: '-1px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                 <span>{activeWord.word}</span>
                 <button
+                  className="speaker-btn"
                   onClick={(e) => {
                     e.stopPropagation();
                     speak(activeWord.word);
