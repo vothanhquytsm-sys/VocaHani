@@ -92,14 +92,16 @@ export const FlashcardPage: React.FC<FlashcardPageProps> = ({ topicName, lessonI
 
   // Pointer drag/swipe events
   const handlePointerDown = (e: React.PointerEvent) => {
-    if (isFlipped) return; // Prevent swiping if rating buttons are showing
     setIsDragging(true);
     dragStart.current = { x: e.clientX, y: e.clientY };
-    e.currentTarget.setPointerCapture(e.pointerId);
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch (err) {}
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDragging) return;
+    if (isFlipped) return; // Prevent card swiping if it is already flipped
     const dx = e.clientX - dragStart.current.x;
     const dy = e.clientY - dragStart.current.y;
     setDragOffset({ x: dx, y: dy });
@@ -108,15 +110,27 @@ export const FlashcardPage: React.FC<FlashcardPageProps> = ({ topicName, lessonI
   const handlePointerUp = (e: React.PointerEvent) => {
     if (!isDragging) return;
     setIsDragging(false);
-    e.currentTarget.releasePointerCapture(e.pointerId);
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch (err) {}
 
-    const threshold = 120;
-    if (dragOffset.x > threshold) {
-      handleRating(4); // Remembered
-    } else if (dragOffset.x < -threshold) {
-      handleRating(1); // Forgotten
+    const dx = e.clientX - dragStart.current.x;
+    const dy = e.clientY - dragStart.current.y;
+    const totalDist = Math.sqrt(dx * dx + dy * dy);
+
+    if (totalDist < 6) {
+      // Tap detected - toggle card flip state
+      setIsFlipped(prev => !prev);
+    } else if (!isFlipped) {
+      const threshold = 120;
+      if (dragOffset.x > threshold) {
+        handleRating(4); // Remembered
+      } else if (dragOffset.x < -threshold) {
+        handleRating(1); // Forgotten
+      } else {
+        setDragOffset({ x: 0, y: 0 });
+      }
     } else {
-      // Snap back
       setDragOffset({ x: 0, y: 0 });
     }
   };
@@ -258,7 +272,6 @@ export const FlashcardPage: React.FC<FlashcardPageProps> = ({ topicName, lessonI
           className="topic-card-container"
         >
           <div 
-            onClick={() => !isDragging && setIsFlipped(!isFlipped)}
             style={{
               width: '100%',
               height: '100%',
