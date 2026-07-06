@@ -28,13 +28,15 @@ export const WordDetailPage: React.FC<WordDetailPageProps> = ({ topicName, lesso
     transcript, 
     isRecording, 
     scoreInfo, 
+    audioUrl,
     startRecording, 
     stopRecording 
   } = useSpeechRecognition();
 
-  // Find all words in this lesson deck
+  // Find all words in this lesson deck (supporting custom albums)
   const deckWords = React.useMemo(() => {
-    const topicWords = words.filter(w => w.topic.toLowerCase() === topicName.toLowerCase() && !w.isCustom);
+    const isCustomTopic = words.some(w => w.topic.toLowerCase() === topicName.toLowerCase() && w.isCustom);
+    const topicWords = words.filter(w => w.topic.toLowerCase() === topicName.toLowerCase() && (isCustomTopic ? w.isCustom : !w.isCustom));
     const start = lessonIndex * 10;
     const end = Math.min(start + 10, topicWords.length);
     return topicWords.slice(start, end);
@@ -271,8 +273,8 @@ export const WordDetailPage: React.FC<WordDetailPageProps> = ({ topicName, lesso
 
             {/* Score & Feedback Display */}
             {scoreInfo && (
-              <div style={{ width: '100%', backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '16px', marginTop: '8px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+              <div style={{ width: '100%', backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '16px', marginTop: '8px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', width: '100%' }}>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-muted)' }}>Kết quả đọc của bạn:</span>
                   <span className="font-heading" style={{
                     fontSize: '20px',
@@ -289,10 +291,39 @@ export const WordDetailPage: React.FC<WordDetailPageProps> = ({ topicName, lesso
                   fontSize: '13px',
                   fontWeight: 700,
                   textAlign: 'left',
-                  color: scoreInfo.score >= 90 ? 'var(--emerald)' : scoreInfo.score >= 70 ? 'var(--amber)' : 'var(--rose)'
+                  color: scoreInfo.score >= 90 ? 'var(--emerald)' : scoreInfo.score >= 70 ? 'var(--amber)' : 'var(--rose)',
+                  marginBottom: '4px'
                 }}>
                   {scoreInfo.message}
                 </p>
+
+                {/* Playback user recording */}
+                {audioUrl && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const audio = new Audio(audioUrl);
+                      audio.play().catch(err => console.error("Playback failed:", err));
+                    }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      backgroundColor: 'var(--accent-glow)',
+                      color: 'var(--accent)',
+                      border: 'none',
+                      borderRadius: '10px',
+                      padding: '8px 16px',
+                      fontSize: '12px',
+                      fontWeight: 750,
+                      cursor: 'pointer',
+                      marginTop: '8px'
+                    }}
+                  >
+                    <Volume2 size={14} />
+                    <span>Nghe lại giọng đọc của bạn</span>
+                  </button>
+                )}
               </div>
             )}
           </div>
