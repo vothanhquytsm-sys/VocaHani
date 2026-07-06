@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 import { type Word, type SRSData } from '../types/Word';
 import { type Phrase } from '../types/Phrase';
 import { type ReadingPassage } from '../types/Reading';
+import { type WordAlbum } from '../types/WordAlbum';
 import { calculateSM2 } from '../utils/sm2';
 
 interface VocabularyContextType {
@@ -16,6 +17,7 @@ interface VocabularyContextType {
   completedReadings: Record<string, number>;
   loading: boolean;
   user: { username: string; token: string } | null;
+  albums: WordAlbum[];
   
   toggleLearned: (wordId: string) => void;
   toggleFavorite: (wordId: string) => void;
@@ -30,6 +32,9 @@ interface VocabularyContextType {
   importCustomWords: (imported: Partial<Word>[]) => void;
   loginUser: (username: string, token: string) => void;
   logoutUser: () => void;
+  addAlbum: (name: string, description?: string, symbolName?: string) => void;
+  deleteAlbum: (id: string) => void;
+  updateAlbum: (id: string, name: string, description?: string, symbolName?: string) => void;
 }
 
 const VocabularyContext = createContext<VocabularyContextType | undefined>(undefined);
@@ -41,6 +46,14 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   const [user, setUser] = useState<{ username: string; token: string } | null>(() => {
     const item = localStorage.getItem('voca_user_session');
     return item ? JSON.parse(item) : null;
+  });
+
+  // Custom Word Albums State
+  const [albums, setAlbums] = useState<WordAlbum[]>(() => {
+    const item = localStorage.getItem('voca_custom_albums');
+    return item ? JSON.parse(item) : [
+      { id: 'default_album', name: 'Từ của tôi', description: 'Album từ vựng mặc định', symbolName: 'folder.fill', createdAt: new Date().toISOString() }
+    ];
   });
 
   // Master lists loaded from public JSON assets
@@ -139,6 +152,10 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   useEffect(() => {
     localStorage.setItem('voca_srs_map', JSON.stringify(srsMap));
   }, [srsMap]);
+
+  useEffect(() => {
+    localStorage.setItem('voca_custom_albums', JSON.stringify(albums));
+  }, [albums]);
 
   // Combine baseWords and customWords, mapping dynamic favorite/learned/srs status
   const words = React.useMemo(() => {
@@ -347,6 +364,49 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     resetLessonProgress();
   }, [resetLessonProgress]);
 
+  // Album modification callbacks
+  const addAlbum = useCallback((name: string, description = '', symbolName = 'folder.fill') => {
+    const newAlbum: WordAlbum = {
+      id: `album_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
+      name: name.trim(),
+      description: description.trim(),
+      symbolName,
+      createdAt: new Date().toISOString()
+    };
+    setAlbums(prev => [...prev, newAlbum]);
+  }, []);
+
+  const deleteAlbum = useCallback((id: string) => {
+    if (id === 'default_album') return;
+    setAlbums(prev => {
+      const album = prev.find(a => a.id === id);
+      if (album) {
+        setCustomWords(words => words.filter(w => w.topic.toLowerCase() !== album.name.toLowerCase()));
+      }
+      return prev.filter(a => a.id !== id);
+    });
+  }, []);
+
+  const updateAlbum = useCallback((id: string, name: string, description = '', symbolName = 'folder.fill') => {
+    setAlbums(prev => prev.map(a => {
+      if (a.id === id) {
+        setCustomWords(words => words.map(w => {
+          if (w.topic.toLowerCase() === a.name.toLowerCase()) {
+            return { ...w, topic: name.trim() };
+          }
+          return w;
+        }));
+        return {
+          ...a,
+          name: name.trim(),
+          description: description.trim(),
+          symbolName
+        };
+      }
+      return a;
+    }));
+  }, []);
+
   // Sync Pull Effect (Runs on Login/App Boot)
   useEffect(() => {
     const pullProgress = async () => {
@@ -367,6 +427,9 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
           setPassedLessons(data.passedLessons || []);
           setCompletedReadings(data.completedReadings || {});
           setSrsMap(data.srsMap || {});
+          setAlbums(data.albums && data.albums.length > 0 ? data.albums : [
+            { id: 'default_album', name: 'Từ của tôi', description: 'Album từ vựng mặc định', symbolName: 'folder.fill', createdAt: new Date().toISOString() }
+          ]);
         }
       } catch (err) {
         console.error('Failed to pull progress from server:', err);
@@ -394,6 +457,7 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             passedLessons,
             completedReadings,
             srsMap,
+            albums,
             customWords
           })
         });
@@ -407,7 +471,7 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     }, 1500);
 
     return () => clearTimeout(timer);
-  }, [user, learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, customWords]);
+  }, [user, learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, albums, customWords]);
 
   return (
     <VocabularyContext.Provider
@@ -435,7 +499,11 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         importCustomWords,
         user,
         loginUser,
-        logoutUser
+        logoutUser,
+        albums,
+        addAlbum,
+        deleteAlbum,
+        updateAlbum
       }}
     >
       {children}

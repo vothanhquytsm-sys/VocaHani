@@ -45,10 +45,19 @@ db.exec(`
     passed_lessons TEXT,
     completed_readings TEXT,
     srs_map TEXT,
+    albums TEXT,
     updated_at TEXT NOT NULL,
     FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
   );
 `);
+// Safe column migration for existing deployments
+try {
+    db.exec("ALTER TABLE user_progress ADD COLUMN albums TEXT;");
+    console.log("Successfully migrated database: added albums column to user_progress.");
+}
+catch (e) {
+    // Column already exists, ignore
+}
 // Auto-seed default user "voquy" if users table is empty
 try {
     const checkUser = db.prepare('SELECT count(*) as count FROM users');

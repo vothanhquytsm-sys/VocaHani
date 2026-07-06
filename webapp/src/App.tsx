@@ -82,7 +82,7 @@ function AppContent() {
       case 'dictionary':
         return <DictionaryPage />;
       case 'customWords':
-        return <CustomWordsPage />;
+        return <CustomWordsPage setPage={setCurrentPage} />;
       case 'statistics':
         return <StatisticsPage />;
       default:

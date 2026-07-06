@@ -26,9 +26,10 @@ export const WordListPage: React.FC<WordListPageProps> = ({ topicName, lessonInd
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   const [showUnlearnedOnly, setShowUnlearnedOnly] = useState(false);
 
-  // Extract base words for this topic (10 per lesson)
+  // Extract words for this topic (10 per lesson, supporting custom albums)
   const lessonWords = React.useMemo(() => {
-    const topicWords = words.filter(w => w.topic.toLowerCase() === topicName.toLowerCase() && !w.isCustom);
+    const isCustomTopic = words.some(w => w.topic.toLowerCase() === topicName.toLowerCase() && w.isCustom);
+    const topicWords = words.filter(w => w.topic.toLowerCase() === topicName.toLowerCase() && (isCustomTopic ? w.isCustom : !w.isCustom));
     const start = lessonIndex * 10;
     const end = Math.min(start + 10, topicWords.length);
     return topicWords.slice(start, end);

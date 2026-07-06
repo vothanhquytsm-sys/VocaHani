@@ -34,7 +34,8 @@ export const TestPage: React.FC<TestPageProps> = ({ topicName, lessonIndex, setP
 
   // Generate questions from lesson words
   const generateQuestions = () => {
-    const topicWords = words.filter(w => w.topic.toLowerCase() === topicName.toLowerCase() && !w.isCustom);
+    const isCustomTopic = words.some(w => w.topic.toLowerCase() === topicName.toLowerCase() && w.isCustom);
+    const topicWords = words.filter(w => w.topic.toLowerCase() === topicName.toLowerCase() && (isCustomTopic ? w.isCustom : !w.isCustom));
     const start = lessonIndex * 10;
     const end = Math.min(start + 10, topicWords.length);
     const subset = topicWords.slice(start, end);
