@@ -1,0 +1,100 @@
+[
+    {
+        "id": "phrase_0001",
+        "english": "How are you doing today?",
+        "vietnamese": "Hôm nay bạn thế nào rồi?",
+        "category": "Greetings & Basics",
+        "contextNote": "Cách chào hỏi phổ biến, tự nhiên hơn 'How are you?'"
+    },
+    {
+        "id": "phrase_0002",
+        "english": "Long time no see! What have you been up to?",
+        "vietnamese": "Lâu rồi không gặp! Dạo này bạn thế nào rồi?",
+        "category": "Greetings & Basics",
+        "contextNote": "Dùng khi lâu ngày mới gặp lại người quen."
+    },
+    {
+        "id": "phrase_0003",
+        "english": "It's a pleasure to meet you.",
+        "vietnamese": "Rất hân hạnh được gặp bạn.",
+        "category": "Greetings & Basics",
+        "contextNote": "Chào hỏi lịch sự trong lần đầu gặp mặt."
+    },
+    {
+        "id": "phrase_0004",
+        "english": "I'd better get going. I'll catch you later!",
+        "vietnamese": "Tôi phải đi đây. Hẹn gặp lại bạn sau nhé!",
+        "category": "Greetings & Basics",
+        "contextNote": "Cách tạm biệt tự nhiên khi chuẩn bị ra về."
+    },
+    {
+        "id": "phrase_0005",
+        "english": "Could we have the bill, please?",
+        "vietnamese": "Làm ơn cho chúng tôi xin hóa đơn thanh toán.",
+        "category": "Shopping & Dining",
+        "contextNote": "Yêu cầu tính tiền tại nhà hàng."
+    },
+    {
+        "id": "phrase_0006",
+        "english": "Does this soup contain any nuts? I'm allergic.",
+        "vietnamese": "Món súp này có đậu phộng không? Tôi bị dị ứng.",
+        "category": "Shopping & Dining",
+        "contextNote": "Hỏi thông tin món ăn khi có dị ứng."
+    },
+    {
+        "id": "phrase_0007",
+        "english": "Can I try this jacket on? Where is the fitting room?",
+        "vietnamese": "Tôi có thể thử chiếc áo khoác này không? Phòng thay đồ ở đâu thế?",
+        "category": "Shopping & Dining",
+        "contextNote": "Sử dụng khi mua quần áo."
+    },
+    {
+        "id": "phrase_0008",
+        "english": "Is there any discount on this item?",
+        "vietnamese": "Mặt hàng này có được giảm giá không?",
+        "category": "Shopping & Dining",
+        "contextNote": "Dùng khi muốn hỏi giá khuyến mãi."
+    },
+    {
+        "id": "phrase_0009",
+        "english": "Excuse me, could you tell me how to get to the train station?",
+        "vietnamese": "Xin lỗi, bạn có thể chỉ tôi đường ra ga tàu hỏa được không?",
+        "category": "Travel & Directions",
+        "contextNote": "Hỏi đường đi một cách lịch sự."
+    },
+    {
+        "id": "phrase_0010",
+        "english": "Is it within walking distance or should I take a cab?",
+        "vietnamese": "Chỗ đó có đi bộ tới được không hay tôi nên bắt taxi?",
+        "category": "Travel & Directions",
+        "contextNote": "Hỏi về khoảng cách điểm đến."
+    },
+    {
+        "id": "phrase_0011",
+        "english": "Could you recommend any good local restaurants around here?",
+        "vietnamese": "Bạn có thể gợi ý nhà hàng nào ngon gần đây không?",
+        "category": "Travel & Directions",
+        "contextNote": "Hỏi xin gợi ý quán ăn từ người bản xứ."
+    },
+    {
+        "id": "phrase_0012",
+        "english": "I'm sorry, I didn't quite catch that. Could you repeat it?",
+        "vietnamese": "Xin lỗi, tôi chưa nghe rõ lắm. Bạn có thể nhắc lại được không?",
+        "category": "Social Interactions",
+        "contextNote": "Cách lịch sự khi muốn người khác lặp lại câu nói."
+    },
+    {
+        "id": "phrase_0013",
+        "english": "Thank you so much for your help, I really appreciate it.",
+        "vietnamese": "Cảm ơn bạn rất nhiều vì đã giúp đỡ, tôi thực sự trân trọng điều đó.",
+        "category": "Social Interactions",
+        "contextNote": "Lời cảm ơn chân thành, ấm áp."
+    },
+    {
+        "id": "phrase_0014",
+        "english": "No worries! Don't mention it.",
+        "vietnamese": "Không sao đâu! Đừng bận tâm.",
+        "category": "Social Interactions",
+        "contextNote": "Trả lời khi người khác cảm ơn."
+    }
+]

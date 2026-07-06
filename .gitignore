@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode / iOS
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/
+HaniVoca.xcodeproj/project.xcworkspace/
+HaniVoca.xcodeproj/xcuserdata/
+
+# Web App node dependencies & build output
+webapp/node_modules/
+webapp/dist/
+webapp/.env*
+
+# Ignore large database files (GitHub 100MB limit)
+HaniVoca/Resources/tudien.db
+
+# Agentic scrap / temp files
+.gemini/
+*.log
+Phrase.o
+SpeechSynthesizer.o
+Word.o
+zim_parsed_words.json

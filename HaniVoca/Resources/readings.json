@@ -1,0 +1,4262 @@
+[
+  {
+    "id": "reading_a2_01",
+    "title": "Daily Routine",
+    "level": "A2",
+    "content": "I wake up at seven o'clock every morning. First, I wash my face and brush my teeth. I eat breakfast with my family at half past seven. I usually have toasted bread, eggs, and warm milk.\n\nAfter breakfast, I walk to the bus stop. The school bus always arrives on time. My classes start at eight o'clock and finish at four o'clock in the afternoon. I enjoy studying science and geography.\n\nIn the evening, I do my homework in my bedroom. Then, I watch funny cartoons on television and play with my cat. I try to go to bed at ten o'clock to get a good night's sleep.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_01_q1",
+        "questionText": "What is the main topic of the text 'Daily Routine'?",
+        "options": [
+          "Daily Routine",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Daily Routine"
+      },
+      {
+        "id": "reading_a2_01_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_01_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_01_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_01_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_02",
+    "title": "My Favorite Sport",
+    "level": "A2",
+    "content": "Football is my favorite sport. I play football with my classmates every Saturday afternoon. We play in the large park near my house because there is plenty of space.\n\nI am a goalkeeper, so I wear special gloves and try to stop the ball. Playing football is excellent exercise and keeps me active and healthy. My friends are very supportive.\n\nMy favorite professional team is Real Madrid. I love watching their exciting matches on television. One day, I hope to travel to Spain to watch a live game in the stadium.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_02_q1",
+        "questionText": "What is the main topic of the text 'My Favorite Sport'?",
+        "options": [
+          "My Favorite Sport",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "My Favorite Sport"
+      },
+      {
+        "id": "reading_a2_02_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_02_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_02_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_02_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_03",
+    "title": "Visiting a Museum",
+    "level": "A2",
+    "content": "Last weekend, my class visited the history museum. We traveled by school bus and arrived early. The museum is a very big, ancient building located in the city center.\n\nInside, we saw old skeletons of dinosaurs and ancient tools used by farmers. Our teacher told us fascinating stories about how people lived thousands of years ago.\n\nBefore we left, I bought a small toy dinosaur at the museum gift shop. It was an educational and interesting day, and I want to visit again with my parents next month.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_03_q1",
+        "questionText": "What is the main topic of the text 'Visiting a Museum'?",
+        "options": [
+          "Visiting a Museum",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Visiting a Museum"
+      },
+      {
+        "id": "reading_a2_03_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_03_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_03_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_03_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_04",
+    "title": "Healthy Eating",
+    "level": "A2",
+    "content": "Eating healthy food is important for everyone. You should eat many fresh fruits and vegetables every day. Apples, bananas, and carrots are good for your body.\n\nDrinking plenty of water is also much better than drinking sweet sodas or energy drinks. You should not eat too much fast food like burgers, pizza, or greasy chips.\n\nI try to eat a sweet apple after dinner instead of sugary cakes and chocolate. Healthy habits help us grow strong and have more energy for school and sports.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_04_q1",
+        "questionText": "What is the main topic of the text 'Healthy Eating'?",
+        "options": [
+          "Healthy Eating",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Healthy Eating"
+      },
+      {
+        "id": "reading_a2_04_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_04_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_04_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_04_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_05",
+    "title": "Going to the Cinema",
+    "level": "A2",
+    "content": "I love going to the cinema with my family on weekends. Yesterday, we watched a funny new cartoon about wild animals. The cinema was crowded, so we bought our tickets online.\n\nBefore entering the hall, we bought popcorn and fruit drinks. We sat in the middle row, which had the best view. The screen was very large and the sound was powerful.\n\nI laughed a lot during the movie because the characters were very silly. I want to see another comedy film with my best friends next month during the school break.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_05_q1",
+        "questionText": "What is the main topic of the text 'Going to the Cinema'?",
+        "options": [
+          "Going to the Cinema",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Going to the Cinema"
+      },
+      {
+        "id": "reading_a2_05_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_05_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_05_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_05_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_06",
+    "title": "Shopping for Clothes",
+    "level": "A2",
+    "content": "Yesterday, I went shopping for new clothes with my mother. I needed a warm jacket and comfortable shoes because winter is coming soon.\n\nWe went to a large department store in the city mall. I tried on three different jackets in the fitting room. I chose a black jacket because it was warm and fit me perfectly.\n\nWe also bought a pair of strong leather boots. My mother helped me choose the correct size. I was very happy with my new clothes and felt ready for the cold weather.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_06_q1",
+        "questionText": "What is the main topic of the text 'Shopping for Clothes'?",
+        "options": [
+          "Shopping for Clothes",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Shopping for Clothes"
+      },
+      {
+        "id": "reading_a2_06_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_06_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_06_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_06_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_07",
+    "title": "Travelling by Train",
+    "level": "A2",
+    "content": "Travelling by train is fast and comfortable. Last summer, we took an express train to visit my grandparents in the countryside. The train left the station on time.\n\nI sat near the window, so I could watch the green fields, hills, and cows passing by. The journey took about two hours, which went by very quickly.\n\nI read an adventure book and listened to quiet music during the trip. Train travel is much more relaxing than driving a car on busy highways.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_07_q1",
+        "questionText": "What is the main topic of the text 'Travelling by Train'?",
+        "options": [
+          "Travelling by Train",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Travelling by Train"
+      },
+      {
+        "id": "reading_a2_07_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_07_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_07_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_07_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_08",
+    "title": "A Day at the Beach",
+    "level": "A2",
+    "content": "On hot summer days, I enjoy going to the beach. My family went to the sunny beach last Sunday. The sand was warm and the sea was a beautiful blue color.\n\nMy sister and I built a large sandcastle with a tower. My father swam in the deep water, while my mother relaxed under an umbrella and read a book.\n\nWe ate fruit salad and chocolate ice cream in the afternoon. We stayed until the sunset to take beautiful photos. It was a wonderful day with my family.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_08_q1",
+        "questionText": "What is the main topic of the text 'A Day at the Beach'?",
+        "options": [
+          "A Day at the Beach",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "A Day at the Beach"
+      },
+      {
+        "id": "reading_a2_08_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_08_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_08_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_08_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_09",
+    "title": "My Hometown",
+    "level": "A2",
+    "content": "I live in a small, peaceful town near a wide river. My hometown is very quiet, clean, and green. There are many tall trees and a beautiful park in the center.\n\nEveryone knows each other in the town, and the people are friendly. We have a small local supermarket, a library, a post office, and two primary schools.\n\nIn the evening, families like to walk along the river path to enjoy the cool air. I love my hometown because it is safe and has a relaxing atmosphere.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_09_q1",
+        "questionText": "What is the main topic of the text 'My Hometown'?",
+        "options": [
+          "My Hometown",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "My Hometown"
+      },
+      {
+        "id": "reading_a2_09_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_09_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_09_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_09_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_10",
+    "title": "Learning a Language",
+    "level": "A2",
+    "content": "Learning English is fun but sometimes requires hard work. I practice speaking English every day at home. I listen to English songs and watch short videos online.\n\nIn school, my teacher helps us learn grammar and correct pronunciation. I write new vocabulary and useful phrases in a small notebook that I carry everywhere.\n\nI want to travel to England in the future. Speaking English will help me talk with local people and make new friends from different countries.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_10_q1",
+        "questionText": "What is the main topic of the text 'Learning a Language'?",
+        "options": [
+          "Learning a Language",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Learning a Language"
+      },
+      {
+        "id": "reading_a2_10_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_10_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_10_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_10_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_11",
+    "title": "Cooking Dinner",
+    "level": "A2",
+    "content": "I like helping my father cook dinner for our family. Today, we decided to make spaghetti with tomato sauce and meatballs. It is my favorite meal.\n\nFirst, we boiled water in a large pot and cooked the pasta. Then, my father carefully cut the vegetables while I mixed the meat and added spices.\n\nWe let the sauce cook slowly on the stove and added grated cheese on top. Cooking takes time and patience, but eating a fresh home-cooked meal is delicious.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_11_q1",
+        "questionText": "What is the main topic of the text 'Cooking Dinner'?",
+        "options": [
+          "Cooking Dinner",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Cooking Dinner"
+      },
+      {
+        "id": "reading_a2_11_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_11_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_11_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_11_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_12",
+    "title": "Weekend Plans",
+    "level": "A2",
+    "content": "I have busy and exciting plans for the upcoming weekend. On Saturday morning, I am going to clean and organize my bedroom to make it tidy.\n\nIn the afternoon, I will meet my school friends at the sports center. We plan to play basketball. On Sunday morning, I will travel to visit my grandparents.\n\nThey always prepare delicious food for us. In the evening, I must return home to study for my history test, which is scheduled for Monday morning.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_12_q1",
+        "questionText": "What is the main topic of the text 'Weekend Plans'?",
+        "options": [
+          "Weekend Plans",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Weekend Plans"
+      },
+      {
+        "id": "reading_a2_12_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_12_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_12_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_12_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_13",
+    "title": "A Famous City",
+    "level": "A2",
+    "content": "Paris is the beautiful capital city of France. It is famous worldwide for its fashion, art museums, and delicious food. It is located on the Seine River.\n\nMillions of tourists visit Paris every year to see landmarks like the Eiffel Tower and the Louvre. The city looks magical at night when the lights turn on.\n\nI want to visit Paris with my classmates in the future. I want to climb the Eiffel Tower and taste traditional French bread and sweet pastries.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_13_q1",
+        "questionText": "What is the main topic of the text 'A Famous City'?",
+        "options": [
+          "A Famous City",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "A Famous City"
+      },
+      {
+        "id": "reading_a2_13_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_13_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_13_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_13_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_14",
+    "title": "My School Days",
+    "level": "A2",
+    "content": "I go to a modern high school near my house. I walk there every morning with my neighbors. My favorite subjects are world history and art class.\n\nI do not like math because the numbers are difficult for me. At lunchtime, I eat sandwiches and fruit with my classmates in the school cafeteria.\n\nWe talk about our favorite music, sports, and computer games. My school days are very happy because my teachers are kind and I have good friends.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_14_q1",
+        "questionText": "What is the main topic of the text 'My School Days'?",
+        "options": [
+          "My School Days",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "My School Days"
+      },
+      {
+        "id": "reading_a2_14_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_14_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_14_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_14_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_15",
+    "title": "Keeping a Pet",
+    "level": "A2",
+    "content": "I have a small, playful cat named Luna. Luna has white fur, green eyes, and a long tail. She is very energetic and likes to chase toys.\n\nI feed Luna twice a day and make sure she has fresh water. I also clean her litter box every morning. When I do my homework, she sits on my desk.\n\nKeeping a pet is a big responsibility because they need care and attention. However, Luna brings so much joy and comfort to our family every day.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_15_q1",
+        "questionText": "What is the main topic of the text 'Keeping a Pet'?",
+        "options": [
+          "Keeping a Pet",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Keeping a Pet"
+      },
+      {
+        "id": "reading_a2_15_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_15_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_15_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_15_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_16",
+    "title": "Changing Weather",
+    "level": "A2",
+    "content": "The weather changes a lot throughout the year in my country. In spring, it is warm and rainy, and beautiful flowers begin to grow in the gardens.\n\nIn summer, the weather is hot and sunny, and we go swimming. In autumn, the leaves turn orange and yellow and fall from the tall trees.\n\nIn winter, the temperature drops and it becomes very cold. Sometimes it snows, which is exciting. Winter is my favorite season because I can build snowmen.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_16_q1",
+        "questionText": "What is the main topic of the text 'Changing Weather'?",
+        "options": [
+          "Changing Weather",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Changing Weather"
+      },
+      {
+        "id": "reading_a2_16_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_16_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_16_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_16_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_17",
+    "title": "A Friendly Neighbor",
+    "level": "A2",
+    "content": "Mr. Green is our neighbor. He is an old, retired doctor who lives in the wooden house next to ours. He lives alone but has many friends.\n\nHe is extremely friendly and enjoys gardening. He spends hours taking care of the beautiful red roses in his front yard. He always smiles and waves.\n\nSometimes, he shares fresh apples and oranges from his trees with us. In return, we help him cut the grass when he feels tired or unwell.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_17_q1",
+        "questionText": "What is the main topic of the text 'A Friendly Neighbor'?",
+        "options": [
+          "A Friendly Neighbor",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "A Friendly Neighbor"
+      },
+      {
+        "id": "reading_a2_17_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_17_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_17_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_17_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_18",
+    "title": "Reading Books",
+    "level": "A2",
+    "content": "Reading books is my favorite quiet hobby. I read for thirty minutes every night before I go to sleep. I especially like adventure stories and mystery books.\n\nReading helps me learn new English words and imagine exciting worlds. I borrow two new books from the school library every Monday morning.\n\nMy favorite book is about a brave boy who travels to distant planets. I think reading is a great way to relax and learn at the same time.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_18_q1",
+        "questionText": "What is the main topic of the text 'Reading Books'?",
+        "options": [
+          "Reading Books",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Reading Books"
+      },
+      {
+        "id": "reading_a2_18_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_18_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_18_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_18_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_19",
+    "title": "Buying a Phone",
+    "level": "A2",
+    "content": "Last week, I bought a new smartphone. My old phone was very slow and the screen was broken, so it was time to get a replacement.\n\nI went to the electronics shop in the mall with my father. A helpful salesperson showed us several modern models with different features.\n\nI chose a phone that has a great camera and a long battery life. Now, I can take high-quality photos of my pets and video call my friends easily.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_19_q1",
+        "questionText": "What is the main topic of the text 'Buying a Phone'?",
+        "options": [
+          "Buying a Phone",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Buying a Phone"
+      },
+      {
+        "id": "reading_a2_19_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_19_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_19_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_19_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_a2_20",
+    "title": "Celebrating a Birthday",
+    "level": "A2",
+    "content": "Last Saturday, I celebrated my fifteenth birthday. I invited my close friends to a small party at my house. We decorated the living room with balloons.\n\nMy mother made a large chocolate cake with candles. My friends sang the traditional birthday song while I blew out the candles and made a wish.\n\nWe played fun board games, listened to pop music, and ate delicious pizza. I received nice presents, including a book, and felt very happy.",
+    "vocabulary": [
+      "exercise",
+      "museum",
+      "weather",
+      "healthy",
+      "cinema",
+      "celebrate"
+    ],
+    "questions": [
+      {
+        "id": "reading_a2_20_q1",
+        "questionText": "What is the main topic of the text 'Celebrating a Birthday'?",
+        "options": [
+          "Celebrating a Birthday",
+          "Space travel",
+          "Cooking food",
+          "Buying cars"
+        ],
+        "correctOption": "Celebrating a Birthday"
+      },
+      {
+        "id": "reading_a2_20_q2",
+        "questionText": "According to the passage, is this activity good or bad?",
+        "options": [
+          "Good and beneficial",
+          "Bad and dangerous",
+          "Boring",
+          "Waste of time"
+        ],
+        "correctOption": "Good and beneficial"
+      },
+      {
+        "id": "reading_a2_20_q3",
+        "questionText": "Where or when does this activity usually happen?",
+        "options": [
+          "In daily life or weekends",
+          "Only in winter",
+          "In the school cafeteria",
+          "At the airport"
+        ],
+        "correctOption": "In daily life or weekends"
+      },
+      {
+        "id": "reading_a2_20_q4",
+        "questionText": "What does the narrator feel about this topic?",
+        "options": [
+          "Happy and interested",
+          "Angry",
+          "Sad",
+          "Scared"
+        ],
+        "correctOption": "Happy and interested"
+      },
+      {
+        "id": "reading_a2_20_q5",
+        "questionText": "Who is involved in this passage?",
+        "options": [
+          "The narrator, friends, or family",
+          "A famous actor",
+          "Only animals",
+          "A school principal"
+        ],
+        "correctOption": "The narrator, friends, or family"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_01",
+    "title": "Job Interview Preparation",
+    "level": "B1",
+    "content": "Preparing for a job interview requires time, research, and careful preparation. First, you should thoroughly research the company to understand its mission, work culture, and current products. This knowledge shows the interviewer that you are genuinely interested in joining their team.\n\nSecond, it is helpful to practice answering common interview questions. You should practice describing your professional strengths, weaknesses, and explaining why you want to leave your current job. Rehearsing your answers builds confidence and reduces anxiety.\n\nDuring the interview, remember to dress professionally, maintain good eye contact, and speak clearly. Finally, don't forget to follow up with a polite thank-you email within twenty-four hours to express your gratitude for the opportunity.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_01_q1",
+        "questionText": "Which of the following best describes the main idea of 'Job Interview Preparation'?",
+        "options": [
+          "The value and management of job interview preparation",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of job interview preparation"
+      },
+      {
+        "id": "reading_b1_01_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_01_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_01_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_01_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_02",
+    "title": "Social Media and Communication",
+    "level": "B1",
+    "content": "Social media has completely transformed the way we communicate with friends and family. Digital platforms like Facebook, Instagram, and WhatsApp allow us to share updates, photos, and messages instantly, regardless of distance.\n\nWhile social media makes it easy to stay connected with people far away, it can also negative impact face-to-face communication. Many people now spend more time scrolling through feeds than talking to the people sitting right next to them.\n\nTo prevent this, experts suggest setting daily screen time limits to ensure that virtual connections do not replace real-life relationships. Maintaining a healthy balance is key to communication in the digital age.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_02_q1",
+        "questionText": "Which of the following best describes the main idea of 'Social Media and Communication'?",
+        "options": [
+          "The value and management of social media and communication",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of social media and communication"
+      },
+      {
+        "id": "reading_b1_02_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_02_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_02_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_02_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_03",
+    "title": "The Importance of Sleep",
+    "level": "B1",
+    "content": "Getting enough sleep is absolutely crucial for our physical and mental health. Scientists and doctors recommend that adults get between seven and nine hours of quality sleep each night to function properly.\n\nDuring sleep, our bodies work hard to repair cells, process memories, and release important hormones. Lack of sleep can lead to serious health problems over time, including weakened immunity and difficulty concentrating during the day.\n\nTo improve sleep quality, experts advise avoiding electronic screens before bed, keeping the bedroom dark and quiet, and maintaining a consistent sleep schedule even on weekends.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_03_q1",
+        "questionText": "Which of the following best describes the main idea of 'The Importance of Sleep'?",
+        "options": [
+          "The value and management of the importance of sleep",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of the importance of sleep"
+      },
+      {
+        "id": "reading_b1_03_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_03_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_03_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_03_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_04",
+    "title": "Travelling Abroad",
+    "level": "B1",
+    "content": "Travelling abroad is an exciting experience that exposes you to new cultures, languages, and lifestyles. When you visit a foreign country, you have the opportunity to taste local cuisine and explore historical landmarks.\n\nHowever, international travel also requires careful planning and organization. You must check your passport validity, apply for visas if necessary, and pack appropriate clothing for the local weather.\n\nLearning a few basic phrases in the local language can make your trip much smoother and show respect to the local residents. Travelling expands your mind and creates unforgettable memories.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_04_q1",
+        "questionText": "Which of the following best describes the main idea of 'Travelling Abroad'?",
+        "options": [
+          "The value and management of travelling abroad",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of travelling abroad"
+      },
+      {
+        "id": "reading_b1_04_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_04_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_04_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_04_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_05",
+    "title": "Environmental Protection",
+    "level": "B1",
+    "content": "Protecting the environment is one of the most urgent challenges facing humanity today. Air pollution, deforestation, and climate change are causing serious damage to ecosystems and wildlife worldwide.\n\nTo protect our planet, individuals can make small but meaningful changes in their daily routines. For instance, we can reduce plastic waste by using reusable bags, save energy by turning off lights, and choose public transport.\n\nAdditionally, planting trees and recycling paper and glass can make a significant difference. Working together to protect nature is essential to ensure a clean and safe future for the next generations.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_05_q1",
+        "questionText": "Which of the following best describes the main idea of 'Environmental Protection'?",
+        "options": [
+          "The value and management of environmental protection",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of environmental protection"
+      },
+      {
+        "id": "reading_b1_05_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_05_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_05_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_05_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_06",
+    "title": "Working from Home",
+    "level": "B1",
+    "content": "The concept of working from home has become increasingly popular in recent years due to advancements in technology. Employees can now complete tasks, attend meetings, and collaborate with colleagues from their own living rooms.\n\nOne of the main advantages of remote work is the flexibility it offers. Employees save time and money on daily commuting and can create a comfortable workspace. It also reduces traffic congestion in big cities.\n\nHowever, working from home also presents challenges, such as maintaining self-discipline and preventing distractions. Separating professional duties from personal life is crucial to avoid stress and overworking.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_06_q1",
+        "questionText": "Which of the following best describes the main idea of 'Working from Home'?",
+        "options": [
+          "The value and management of working from home",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of working from home"
+      },
+      {
+        "id": "reading_b1_06_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_06_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_06_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_06_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_07",
+    "title": "Studying at University",
+    "level": "B1",
+    "content": "Attending university is a significant milestone that offers both academic and personal growth. Students have the opportunity to specialize in a field they are passionate about and learn from experienced professors.\n\nBeyond academics, university life teaches students how to manage their time, live independently, and cooperate with peers from diverse backgrounds. Group projects and student clubs are great ways to develop teamwork.\n\nAlthough university studies can be demanding and stressful, the knowledge and friendships gained are highly rewarding. It prepares young adults for their future careers and helps them become responsible citizens.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_07_q1",
+        "questionText": "Which of the following best describes the main idea of 'Studying at University'?",
+        "options": [
+          "The value and management of studying at university",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of studying at university"
+      },
+      {
+        "id": "reading_b1_07_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_07_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_07_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_07_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_08",
+    "title": "A Healthy Lifestyle",
+    "level": "B1",
+    "content": "Maintaining a healthy lifestyle involves a combination of balanced nutrition, regular exercise, and mental well-being. Eating a diet rich in vegetables, whole grains, and lean proteins provides the body with essential energy.\n\nPhysical activity, such as walking, running, or swimming, strengthens the heart, improves mood, and keeps the muscles strong. Exercising three times a week is highly recommended by fitness experts.\n\nAdditionally, managing stress through hobbies and spending quality time with loved ones is crucial for mental health. Small, consistent choices every day lead to long-term wellness and prevent chronic illnesses.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_08_q1",
+        "questionText": "Which of the following best describes the main idea of 'A Healthy Lifestyle'?",
+        "options": [
+          "The value and management of a healthy lifestyle",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of a healthy lifestyle"
+      },
+      {
+        "id": "reading_b1_08_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_08_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_08_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_08_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_09",
+    "title": "Public Transportation",
+    "level": "B1",
+    "content": "Public transportation systems, including buses, trains, and subways, are vital for modern city life. They provide an affordable and efficient way for millions of residents to commute to work and school daily.\n\nUsing public transport helps reduce traffic congestion on city roads and lowers carbon emissions, which is beneficial for the environment. It also saves commuters the stress of finding parking spots.\n\nGovernments must continue to invest in public transit to make it safer, cleaner, and more accessible. Modernizing transit systems is key to developing sustainable and livable urban areas.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_09_q1",
+        "questionText": "Which of the following best describes the main idea of 'Public Transportation'?",
+        "options": [
+          "The value and management of public transportation",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of public transportation"
+      },
+      {
+        "id": "reading_b1_09_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_09_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_09_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_09_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_10",
+    "title": "Traditional Festivals",
+    "level": "B1",
+    "content": "Traditional festivals are celebrated worldwide and play a crucial role in preserving cultural heritage. These events bring families and communities together to share meals, perform traditional dances, and wear special clothing.\n\nFestivals reflect the history, values, and beliefs of a society, passing them down to younger generations. They provide an opportunity to celebrate shared identity and feel connected to the past.\n\nParticipating in these cultural celebrations allows people to honor their ancestors, express gratitude, and strengthen community bonds. It also attracts tourists who want to learn about different customs.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_10_q1",
+        "questionText": "Which of the following best describes the main idea of 'Traditional Festivals'?",
+        "options": [
+          "The value and management of traditional festivals",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of traditional festivals"
+      },
+      {
+        "id": "reading_b1_10_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_10_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_10_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_10_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_11",
+    "title": "Buying a Home",
+    "level": "B1",
+    "content": "Buying a home is one of the most significant financial decisions a person will make in their lifetime. It requires careful research into property values, neighborhood safety, and mortgage options before signing.\n\nOwning a home provides stability, privacy, and the freedom to modify the living space according to personal tastes. It is often seen as a valuable long-term investment for the future.\n\nHowever, homeownership also comes with responsibilities, such as property taxes, insurance, and maintenance costs. Financial planning and saving for a down payment are key to a successful purchase.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_11_q1",
+        "questionText": "Which of the following best describes the main idea of 'Buying a Home'?",
+        "options": [
+          "The value and management of buying a home",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of buying a home"
+      },
+      {
+        "id": "reading_b1_11_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_11_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_11_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_11_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_12",
+    "title": "Internet Safety",
+    "level": "B1",
+    "content": "As the internet becomes more integrated into our daily lives, practicing internet safety is crucial to protect personal information. Hackers and scammers use sophisticated methods to steal identities and financial data.\n\nTo stay safe online, users should create strong, unique passwords for every account and enable two-factor authentication. Avoiding public Wi-Fi networks for financial transactions is also highly recommended.\n\nBeing cautious about the information shared on social media is essential to prevent privacy leaks. Educating children about online safety is also important to protect them from digital threats.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_12_q1",
+        "questionText": "Which of the following best describes the main idea of 'Internet Safety'?",
+        "options": [
+          "The value and management of internet safety",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of internet safety"
+      },
+      {
+        "id": "reading_b1_12_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_12_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_12_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_12_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_13",
+    "title": "Time Management",
+    "level": "B1",
+    "content": "Effective time management is a valuable skill that helps individuals increase productivity and reduce stress. By planning daily activities, setting priorities, and dividing large tasks into smaller steps, people work efficiently.\n\nAvoiding distractions, such as excessive social media use or television, is also important to stay focused. Using digital calendars or planner notebooks can help track deadlines and appointments.\n\nManaging time successfully allows individuals to achieve their goals and maintain a healthy balance between professional responsibilities and personal leisure activities. It leads to a more organized and satisfying life.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_13_q1",
+        "questionText": "Which of the following best describes the main idea of 'Time Management'?",
+        "options": [
+          "The value and management of time management",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of time management"
+      },
+      {
+        "id": "reading_b1_13_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_13_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_13_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_13_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_14",
+    "title": "Volunteer Work",
+    "level": "B1",
+    "content": "Volunteering is a noble activity that benefits both communities and the volunteers themselves. By dedicating time to help others at food banks, animal shelters, or community centers, volunteers contribute to social well-being.\n\nThis experience also helps volunteers develop new skills, gain confidence, and meet like-minded people. It provides a sense of purpose and helps individuals understand the challenges faced by others.\n\nVolunteering teaches empathy, kindness, and reminds us of the power of working together. Even a few hours of service a week can make a positive impact on society.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_14_q1",
+        "questionText": "Which of the following best describes the main idea of 'Volunteer Work'?",
+        "options": [
+          "The value and management of volunteer work",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of volunteer work"
+      },
+      {
+        "id": "reading_b1_14_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_14_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_14_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_14_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_15",
+    "title": "Digital Friendship",
+    "level": "B1",
+    "content": "The internet has redefined friendship by enabling digital connections across continents. Social platforms allow people to find communities with shared interests and maintain long-distance friendships through video calls.\n\nOnline friends can offer emotional support, share ideas, and provide valuable advice. It helps individuals learn about different cultures and perspectives without leaving their homes.\n\nHowever, digital communication lacks the physical presence of real-life interactions. Finding a healthy balance between online networks and face-to-face friendships is important to prevent feelings of isolation.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_15_q1",
+        "questionText": "Which of the following best describes the main idea of 'Digital Friendship'?",
+        "options": [
+          "The value and management of digital friendship",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of digital friendship"
+      },
+      {
+        "id": "reading_b1_15_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_15_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_15_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_15_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_16",
+    "title": "Learning to Drive",
+    "level": "B1",
+    "content": "Learning how to drive is an exciting step toward independence and freedom for young adults. However, it also comes with heavy responsibilities and requires focused practice.\n\nStudent drivers must master traffic rules, understand road signs, and learn to control the vehicle under different weather conditions. Attending a professional driving school is highly recommended to learn safety rules.\n\nStaying focused, avoiding distractions like mobile phones, and practicing defensive driving are essential to ensure the safety of both the driver, passengers, and pedestrians on the road.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_16_q1",
+        "questionText": "Which of the following best describes the main idea of 'Learning to Drive'?",
+        "options": [
+          "The value and management of learning to drive",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of learning to drive"
+      },
+      {
+        "id": "reading_b1_16_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_16_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_16_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_16_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_17",
+    "title": "Exploring a New Hobby",
+    "level": "B1",
+    "content": "Engaging in a new hobby is a great way to relieve stress, stimulate the mind, and meet new people. Whether it is gardening, painting, photography, or playing an instrument, hobbies provide a creative outlet.\n\nLearning a new skill challenges the brain and builds self-confidence. It allows individuals to focus on something enjoyable outside of work and school routines, promoting relaxation.\n\nTaking time for a hobby helps maintain a positive mindset and prevents burnout. It is an investment in your personal happiness and well-being that can bring lifelong satisfaction.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_17_q1",
+        "questionText": "Which of the following best describes the main idea of 'Exploring a New Hobby'?",
+        "options": [
+          "The value and management of exploring a new hobby",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of exploring a new hobby"
+      },
+      {
+        "id": "reading_b1_17_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_17_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_17_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_17_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_18",
+    "title": "Staying Fit in the City",
+    "level": "B1",
+    "content": "Remaining physically active in a busy city environment can be challenging due to busy schedules and limited space. However, urban areas offer many creative options for staying fit.\n\nMany cities have public parks with running tracks, outdoor gyms, and bicycle lanes. Commuters can also incorporate exercise into their routine by walking short distances or taking the stairs.\n\nJoining local sports clubs or fitness classes is also a great way to stay motivated and social. Small, active changes in daily routines contribute significantly to overall physical fitness.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_18_q1",
+        "questionText": "Which of the following best describes the main idea of 'Staying Fit in the City'?",
+        "options": [
+          "The value and management of staying fit in the city",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of staying fit in the city"
+      },
+      {
+        "id": "reading_b1_18_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_18_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_18_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_18_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_19",
+    "title": "Planning a Business",
+    "level": "B1",
+    "content": "Starting a business is a challenging venture that requires a clear vision, passion, and strategic planning. Entrepreneurs must write a detailed business plan that outlines their product, target market, and finances.\n\nConducting market research is crucial to understand competitors and customer needs. It helps identify opportunities and potential risks before investing money into the project.\n\nSecuring funding, finding a suitable location, and building a dedicated team are also key factors that determine the long-term survival and success of a new business startup.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_19_q1",
+        "questionText": "Which of the following best describes the main idea of 'Planning a Business'?",
+        "options": [
+          "The value and management of planning a business",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of planning a business"
+      },
+      {
+        "id": "reading_b1_19_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_19_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_19_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_19_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b1_20",
+    "title": "Online Shopping Trends",
+    "level": "B1",
+    "content": "Online shopping has experienced rapid growth, changing the global retail landscape. The convenience of browsing products, comparing prices, and receiving deliveries at home has made e-commerce highly popular.\n\nRetailers now use digital advertising and personalized recommendations to attract customers. Online shopping festivals and discounts also drive high sales volumes throughout the year.\n\nWhile online shopping saves time, consumers must be cautious of online fraud. Checking return policies, reading customer reviews, and using secure payment methods are essential for a safe shopping experience.",
+    "vocabulary": [
+      "prepare",
+      "crucial",
+      "collaborate",
+      "festival",
+      "volunteer",
+      "balance"
+    ],
+    "questions": [
+      {
+        "id": "reading_b1_20_q1",
+        "questionText": "Which of the following best describes the main idea of 'Online Shopping Trends'?",
+        "options": [
+          "The value and management of online shopping trends",
+          "The history of space flight",
+          "How to cook a healthy meal",
+          "A description of ancient ruins"
+        ],
+        "correctOption": "The value and management of online shopping trends"
+      },
+      {
+        "id": "reading_b1_20_q2",
+        "questionText": "What does the text suggest is a key advantage of this concept?",
+        "options": [
+          "Flexibility and positive personal growth",
+          "It is completely free",
+          "It requires no effort",
+          "It replaces all real relationships"
+        ],
+        "correctOption": "Flexibility and positive personal growth"
+      },
+      {
+        "id": "reading_b1_20_q3",
+        "questionText": "What is one challenge or negative side mentioned in the text?",
+        "options": [
+          "Maintaining self-discipline or balance",
+          "High cost of membership",
+          "Bad weather conditions",
+          "Lack of information"
+        ],
+        "correctOption": "Maintaining self-discipline or balance"
+      },
+      {
+        "id": "reading_b1_20_q4",
+        "questionText": "What do experts or the narrator advise doing?",
+        "options": [
+          "Planning, setting limits, or researching",
+          "Stopping all daily tasks",
+          "Avoiding other people",
+          "Spending more money"
+        ],
+        "correctOption": "Planning, setting limits, or researching"
+      },
+      {
+        "id": "reading_b1_20_q5",
+        "questionText": "What is essential to achieve success in this area?",
+        "options": [
+          "A healthy balance and consistency",
+          "Using social media all day",
+          "Working alone without advice",
+          "Ignoring the rules"
+        ],
+        "correctOption": "A healthy balance and consistency"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_01",
+    "title": "Renewable Energy and the Future",
+    "level": "B2",
+    "content": "As global temperatures continue to rise due to greenhouse gas emissions, the transition to renewable energy sources has become an urgent priority for nations worldwide. Unlike fossil fuels, which contribute heavily to climate change, renewable energy is clean.\n\nSolar and wind power are currently the fastest-growing sources of green energy, driven by technological advancements and falling manufacturing costs. Hydroelectric and geothermal energy also play key roles in providing stable electricity.\n\nHowever, storing renewable energy for times when the sun isn't shining or the wind isn't blowing remains a major technological challenge. Developing efficient, large-scale battery systems is key to achieving a sustainable future.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_01_q1",
+        "questionText": "What is the primary objective of 'Renewable Energy and the Future' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_01_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_01_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_01_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_01_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_02",
+    "title": "Wonders of Artificial Intelligence",
+    "level": "B2",
+    "content": "Artificial Intelligence (AI) has rapidly progressed from a science fiction concept to an essential technology in modern society. Today, AI systems are deployed in diverse fields, ranging from healthcare diagnostics to autonomous vehicles.\n\nThese advanced systems analyze vast amounts of data to identify complex patterns and make decisions with remarkable accuracy. In medicine, AI can detect diseases early, while in logistics, it optimizes delivery routes.\n\nDespite these benefits, the rapid growth of AI raises significant ethical concerns. Issues such as job displacement, data privacy, and algorithm bias require careful international regulation to ensure that AI benefits humanity.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_02_q1",
+        "questionText": "What is the primary objective of 'Wonders of Artificial Intelligence' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_02_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_02_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_02_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_02_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_03",
+    "title": "Deep Space Exploration",
+    "level": "B2",
+    "content": "Deep space exploration has always fascinated humanity, representing the ultimate frontier of scientific discovery. In recent years, robotic missions and advanced space telescopes have provided unprecedented views of distant galaxies.\n\nThe search for extraterrestrial life remains one of the primary drivers of space exploration. Missions are currently targeting Mars and the icy moons of Jupiter and Saturn, where liquid water oceans may exist under the ice sheets.\n\nHowever, manned missions to deep space present immense biological and psychological challenges. Cosmic radiation, muscle degeneration from low gravity, and long-duration isolation require groundbreaking engineering and medical breakthroughs.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_03_q1",
+        "questionText": "What is the primary objective of 'Deep Space Exploration' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_03_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_03_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_03_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_03_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_04",
+    "title": "The Gig Economy",
+    "level": "B2",
+    "content": "The rise of digital platforms has fueled the rapid growth of the gig economy, transforming traditional employment structures. Freelancers, independent contractors, and gig workers now perform short-term tasks worldwide.\n\nWhile the gig economy offers workers unmatched flexibility and autonomy, it also highlights significant economic vulnerabilities. Gig workers often lack employment benefits, job security, health insurance, and labor protections.\n\nDebates continue worldwide regarding the classification and legal rights of these workers. Developing fair labor standards that protect workers while preserving flexibility is a key challenge for modern governments.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_04_q1",
+        "questionText": "What is the primary objective of 'The Gig Economy' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_04_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_04_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_04_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_04_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_05",
+    "title": "Cryptocurrencies and Finance",
+    "level": "B2",
+    "content": "Cryptocurrencies have emerged as a disruptive financial technology, challenging the dominance of traditional banking systems. Powered by decentralized blockchain technology, digital assets offer fast, secure transactions.\n\nSupporters argue that cryptocurrencies promote financial inclusion, lower transaction fees, and protect users from inflation. Blockchain ledger technology also ensures transaction transparency and security.\n\nHowever, critics point to high market volatility, regulatory uncertainty, and the significant environmental impact of energy-intensive mining. The future role of digital currencies in global finance remains highly debated.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_05_q1",
+        "questionText": "What is the primary objective of 'Cryptocurrencies and Finance' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_05_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_05_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_05_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_05_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_06",
+    "title": "Globalization and Culture",
+    "level": "B2",
+    "content": "Globalization has accelerated the exchange of goods, ideas, and information, creating a highly interconnected world. While this process fosters economic growth and cross-cultural understanding, it also raises concerns about cultural homogenization.\n\nThe global expansion of multinational corporations and media networks can overshadow local traditions and languages. This can lead to the loss of unique cultural identities and local craftsmanship in smaller communities.\n\nPreserving indigenous cultures and languages while embracing the benefits of global integration is a delicate balance. Communities must actively document and celebrate their heritage to maintain cultural diversity.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_06_q1",
+        "questionText": "What is the primary objective of 'Globalization and Culture' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_06_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_06_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_06_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_06_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_07",
+    "title": "Cybersecurity Challenges",
+    "level": "B2",
+    "content": "In our hyper-connected digital world, cybersecurity has become a critical concern for individuals, businesses, and governments alike. Cyberattacks, including ransomware and data breaches, threaten critical infrastructure.\n\nHackers continuously develop sophisticated methods to bypass digital defenses, targeting financial institutions and healthcare systems. A single breach can result in massive financial loss and compromise sensitive personal data.\n\nPreventing these threats requires robust security measures, constant monitoring, and public education. As technology advances, cybersecurity strategies must evolve to counter increasingly complex virtual threats.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_07_q1",
+        "questionText": "What is the primary objective of 'Cybersecurity Challenges' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_07_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_07_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_07_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_07_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_08",
+    "title": "Climate Change Mitigation",
+    "level": "B2",
+    "content": "Mitigating climate change requires immediate, global action to reduce greenhouse gas emissions and protect natural carbon sinks. Governments are implementing policies, such as carbon pricing and green subsidies, to incentivize industries.\n\nAdditionally, protecting forests and restoring damaged ecosystems are vital to absorbing excess carbon dioxide from the atmosphere. Individuals can also contribute by adopting energy-efficient lifestyles.\n\nTransitioning to a circular economy and reducing waste are key elements of environmental sustainability. Achieving net-zero emissions will demand international cooperation, technological innovation, and political will.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_08_q1",
+        "questionText": "What is the primary objective of 'Climate Change Mitigation' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_08_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_08_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_08_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_08_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_09",
+    "title": "Mental Health Awareness",
+    "level": "B2",
+    "content": "In recent years, society has made significant progress in promoting mental health awareness and reducing the stigma surrounding psychological disorders. Open discussions encourage individuals to seek professional help.\n\nEmployers are also recognizing the importance of mental well-being in the workplace, offering support programs and flexible hours to prevent burnout. Schools are incorporating emotional wellness into their curricula.\n\nRaising awareness helps build supportive environments where mental health is prioritized. Access to affordable mental healthcare services remains an essential goal for public health organizations worldwide.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_09_q1",
+        "questionText": "What is the primary objective of 'Mental Health Awareness' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_09_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_09_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_09_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_09_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_10",
+    "title": "Sustainable Architecture",
+    "level": "B2",
+    "content": "Sustainable architecture aims to minimize the environmental impact of buildings by optimizing energy efficiency, water conservation, and material usage. Architects employ green building designs, such as solar panels and green roofs.\n\nUsing recycled and locally sourced materials lowers the carbon footprint of construction. Buildings are designed to maximize natural light and ventilation, reducing the need for heating and air conditioning.\n\nAs urban populations grow, sustainable building practices are crucial to creating eco-friendly cities. Green architecture promotes healthier living environments and helps mitigate urban heat island effects.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_10_q1",
+        "questionText": "What is the primary objective of 'Sustainable Architecture' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_10_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_10_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_10_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_10_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_11",
+    "title": "Genetic Engineering",
+    "level": "B2",
+    "content": "Genetic engineering has revolutionized biotechnology, offering potential cures for genetic diseases and advancements in agriculture. Techniques like CRISPR allow scientists to edit DNA sequences with high precision.\n\nIn agriculture, genetically modified crops can resist pests, tolerate drought, and provide higher yields, increasing food security. In medicine, gene therapy offers hope for treating inherited conditions like muscular dystrophy.\n\nHowever, modifying genetic codes raises profound ethical questions regarding the potential modification of human embryos. Establishing clear international ethical guidelines is vital to prevent misuse of technology.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_11_q1",
+        "questionText": "What is the primary objective of 'Genetic Engineering' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_11_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_11_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_11_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_11_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_12",
+    "title": "Electric Vehicles",
+    "level": "B2",
+    "content": "The transition to electric vehicles (EVs) is accelerating as nations strive to reduce transport emissions. Major car manufacturers are investing heavily in EV technology, improving battery range and reducing costs.\n\nWhile EVs produce zero tailpipe emissions, their environmental impact depends on the source of electricity used to charge them. Transitioning power grids to clean energy is essential to maximize EV benefits.\n\nAdditionally, expanding public charging networks and recycling spent battery materials are key challenges. Governments are offering financial incentives to encourage consumers to switch to electric transport.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_12_q1",
+        "questionText": "What is the primary objective of 'Electric Vehicles' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_12_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_12_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_12_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_12_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_13",
+    "title": "Virtual Reality Education",
+    "level": "B2",
+    "content": "Virtual Reality (VR) technology is transforming education by creating immersive learning experiences. Students can explore historical sites, conduct virtual chemistry experiments, or visualize complex structures in three dimensions.\n\nThis interactive approach enhances student engagement, improves memory retention, and makes learning abstract concepts easier. It allows students to experience scenarios that would be too dangerous or expensive in real life.\n\nHowever, high equipment costs and the lack of high-quality educational software are obstacles that limit adoption. Overcoming these barriers is necessary to bring VR learning to classrooms worldwide.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_13_q1",
+        "questionText": "What is the primary objective of 'Virtual Reality Education' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_13_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_13_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_13_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_13_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_14",
+    "title": "Urbanization Impacts",
+    "level": "B2",
+    "content": "Urbanization is reshaping global demographics as millions of people move to cities in search of economic opportunities. This rapid growth presents immense challenges for municipal governments, including housing shortages.\n\nTraffic congestion and air pollution are also major concerns in dense urban areas. To accommodate growing populations, cities must invest in smart infrastructure, green spaces, and efficient public transportation.\n\nBalancing urban development with environmental preservation is key to creating liveable cities. Smart city technologies can help manage resources efficiently, reducing waste and improving services.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_14_q1",
+        "questionText": "What is the primary objective of 'Urbanization Impacts' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_14_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_14_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_14_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_14_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_15",
+    "title": "Biodiversity Loss",
+    "level": "B2",
+    "content": "The rapid loss of biodiversity is a silent crisis that threatens the stability of global ecosystems. Habitat destruction, overfishing, pollution, and climate change are driving many species to extinction at alarming rates.\n\nBiodiversity is crucial for clean air, fresh water, and crop pollination, which are essential for human survival. The collapse of ecosystems can lead to food shortages and increased vulnerability to natural disasters.\n\nProtecting endangered species and establishing marine and nature reserves are urgent measures required to halt ecological decline. Conservation efforts must be supported by global policies and local action.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_15_q1",
+        "questionText": "What is the primary objective of 'Biodiversity Loss' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_15_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_15_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_15_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_15_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_16",
+    "title": "Space Tourism",
+    "level": "B2",
+    "content": "Space tourism is transitioning from a futuristic dream to a commercial reality, with private aerospace companies launching suborbital flights. Wealthy individuals can now experience weightlessness and view Earth from space.\n\nWhile this industry drives technological innovation and sparks public interest in space science, it also raises environmental concerns. The high carbon footprint of rocket launches contributes to atmospheric pollution.\n\nRegulators must develop strict safety guidelines and environmental standards for commercial space flights. Ensuring that space activities do not harm the planet's atmosphere is a key concern for scientists.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_16_q1",
+        "questionText": "What is the primary objective of 'Space Tourism' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_16_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_16_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_16_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_16_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_17",
+    "title": "Remote Work Revolution",
+    "level": "B2",
+    "content": "The remote work revolution has permanently changed workplace dynamics and lifestyle choices for millions of professional workers. Many companies now offer hybrid models, allowing employees to split their time.\n\nRemote work eliminates stressful commutes, reduces traffic accidents, and allows people to live in more affordable areas outside of major cities. It promotes a better work-life balance for many employees.\n\nHowever, long-term remote work can lead to isolation and make it difficult for teams to build strong personal connections. Companies must adapt management strategies to maintain team cohesion and support mental health.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_17_q1",
+        "questionText": "What is the primary objective of 'Remote Work Revolution' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_17_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_17_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_17_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_17_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_18",
+    "title": "E-learning Advancements",
+    "level": "B2",
+    "content": "E-learning has experienced rapid advancements, making education more accessible to students worldwide. Online courses and digital learning platforms offer flexible schedules and a wide variety of subjects to study.\n\nThis technology allows adult learners to acquire new skills while working full-time, promoting lifelong learning. Interactive quizzes, videos, and discussion forums enhance the online learning experience.\n\nDespite these benefits, online education requires high self-motivation and time management. Additionally, students in remote areas often face digital divide challenges, such as poor internet connectivity.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_18_q1",
+        "questionText": "What is the primary objective of 'E-learning Advancements' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_18_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_18_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_18_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_18_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_19",
+    "title": "Ocean Pollution",
+    "level": "B2",
+    "content": "Ocean pollution is a major environmental threat, with millions of tons of plastic waste entering marine environments every year. This debris harms marine life, as animals ingest microplastics or become entangled in nets.\n\nChemical runoff from agriculture and industrial waste also creates toxic dead zones in coastal waters, killing fish and coral reefs. These pollutants accumulate in the marine food chain, eventually affecting human health.\n\nCombating ocean pollution requires global agreements to ban single-use plastics, improve waste management, and restore damaged marine ecosystems. Protecting our oceans is vital for global ecological balance.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_19_q1",
+        "questionText": "What is the primary objective of 'Ocean Pollution' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_19_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_19_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_19_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_19_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  },
+  {
+    "id": "reading_b2_20",
+    "title": "Smart Cities",
+    "level": "B2",
+    "content": "Smart cities utilize Internet of Things (IoT) technologies and data analytics to optimize urban services and improve residents' quality of life. Sensors monitor traffic flow, air quality, and energy usage in real time.\n\nSmart grids reduce electricity waste by adjusting to demand, while automated traffic systems ease congestion. Data-driven decisions help municipal governments manage resources efficiently and respond quickly to issues.\n\nHowever, implementing these technologies requires high initial investments and robust cybersecurity to protect civic data. Ensuring citizen privacy while collecting urban data is a critical concern for smart city planners.",
+    "vocabulary": [
+      "mitigation",
+      "cryptocurrency",
+      "homogenization",
+      "biodiversity",
+      "redefine",
+      "decentralized"
+    ],
+    "questions": [
+      {
+        "id": "reading_b2_20_q1",
+        "questionText": "What is the primary objective of 'Smart Cities' in modern society?",
+        "options": [
+          "Addressing complex global and technological challenges",
+          "Entertainment and leisure",
+          "Reducing daily sleep hours",
+          "Replacing all human teachers"
+        ],
+        "correctOption": "Addressing complex global and technological challenges"
+      },
+      {
+        "id": "reading_b2_20_q2",
+        "questionText": "What significant challenge or obstacle is emphasized in the passage?",
+        "options": [
+          "Technological, environmental, or ethical concerns",
+          "Lack of interest from young people",
+          "The physical weight of machines",
+          "High electricity costs only"
+        ],
+        "correctOption": "Technological, environmental, or ethical concerns"
+      },
+      {
+        "id": "reading_b2_20_q3",
+        "questionText": "How do advanced systems or modern policies resolve these problems?",
+        "options": [
+          "By analyzing data, regulating processes, or incentivizing change",
+          "By ignoring the data",
+          "By stopping all industrial production",
+          "By relying on luck"
+        ],
+        "correctOption": "By analyzing data, regulating processes, or incentivizing change"
+      },
+      {
+        "id": "reading_b2_20_q4",
+        "questionText": "What is described as key to achieving a sustainable or successful future?",
+        "options": [
+          "Developing efficient methods and robust regulations",
+          "Using fossil fuels permanently",
+          "Encouraging data breaches",
+          "Ignoring cybersecurity"
+        ],
+        "correctOption": "Developing efficient methods and robust regulations"
+      },
+      {
+        "id": "reading_b2_20_q5",
+        "questionText": "What does the passage imply about the relationship between technology and society?",
+        "options": [
+          "It requires careful balance to ensure broad humanity benefits",
+          "Technology is always negative",
+          "Society should stop using technology",
+          "There is no relationship"
+        ],
+        "correctOption": "It requires careful balance to ensure broad humanity benefits"
+      }
+    ]
+  }
+]
