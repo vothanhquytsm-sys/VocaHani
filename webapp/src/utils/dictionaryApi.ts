@@ -15,6 +15,8 @@ export interface LookupResult {
   exampleVietnamese: string;
   symbolName: string;
   meaningsList: DictionaryMeaning[];
+  audioUk?: string;
+  audioUs?: string;
 }
 
 export async function translateText(text: string, from = 'en', to = 'vi'): Promise<string> {
@@ -37,6 +39,8 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
   
   let ipa = '';
   let meaningsList: DictionaryMeaning[] = [];
+  let audioUk = '';
+  let audioUs = '';
   
   try {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${cleanWord}`);
@@ -44,12 +48,27 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
       const data = await response.json();
       const entry = data[0];
       
-      // Resolve IPA phonetic transcriptions
+      // Resolve IPA phonetic transcriptions & audio pronunciations (UK vs US)
       if (entry.phonetic) {
         ipa = entry.phonetic;
       } else if (entry.phonetics && entry.phonetics.length > 0) {
         const withText = entry.phonetics.find((p: any) => p.text);
         if (withText) ipa = withText.text;
+      }
+
+      if (entry.phonetics && Array.isArray(entry.phonetics)) {
+        for (const p of entry.phonetics) {
+          if (p.audio) {
+            if (p.audio.includes('-uk') || p.audio.endsWith('uk.mp3')) {
+              audioUk = p.audio;
+            } else if (p.audio.includes('-us') || p.audio.endsWith('us.mp3')) {
+              audioUs = p.audio;
+            } else {
+              if (!audioUs) audioUs = p.audio;
+              else if (!audioUk) audioUk = p.audio;
+            }
+          }
+        }
       }
 
       // Parse meanings and translate definitions
@@ -114,7 +133,9 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
     exampleEnglish: first.exampleEnglish || '',
     exampleVietnamese: first.exampleVietnamese || '',
     symbolName,
-    meaningsList
+    meaningsList,
+    audioUk,
+    audioUs
   };
 }
 

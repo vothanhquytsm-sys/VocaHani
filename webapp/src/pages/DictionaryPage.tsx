@@ -236,38 +236,11 @@ export const DictionaryPage: React.FC = () => {
         {lookupResult ? (
           <div className="glass animate-fade-in" style={{ borderRadius: '24px', padding: '32px', border: '1px solid var(--border)', boxShadow: 'var(--card-shadow)', textAlign: 'left' }}>
             {/* Back button inside definition */}
-            <button className="back-btn" onClick={() => { setLookupResult(null); setSearchText(''); }}>
-              <ArrowLeft size={16} />
-              <span>Quay lại tra cứu</span>
-            </button>
-
-            {/* Word Headers */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <h2 className="font-heading" style={{ fontSize: '32px', fontWeight: 900, color: 'var(--text-bold)', letterSpacing: '-0.5px' }}>
-                    {lookupResult.word}
-                  </h2>
-                  <button
-                    onClick={() => speak(lookupResult.word)}
-                    style={{
-                      background: 'var(--accent-glow)',
-                      color: 'var(--accent)',
-                      border: 'none',
-                      borderRadius: '50%',
-                      width: '36px',
-                      height: '36px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      cursor: 'pointer'
-                    }}
-                  >
-                    <Volume2 size={16} />
-                  </button>
-                </div>
-                <span style={{ fontSize: '15px', color: 'var(--text-muted)', fontWeight: 600 }}>{lookupResult.ipa}</span>
-              </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <button className="back-btn" onClick={() => { setLookupResult(null); setSearchText(''); }}>
+                <ArrowLeft size={16} />
+                <span>Quay lại tra cứu</span>
+              </button>
 
               {/* Save button */}
               <button
@@ -294,99 +267,164 @@ export const DictionaryPage: React.FC = () => {
               </button>
             </div>
 
-            {/* Detailed meanings list grouped by Parts of Speech */}
-            {lookupResult.meaningsList && lookupResult.meaningsList.length > 0 ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' }}>
-                {lookupResult.meaningsList.map((m, idx) => (
-                  <div 
-                    key={idx} 
-                    style={{ 
-                      backgroundColor: 'var(--bg-tertiary)', 
-                      borderRadius: '16px', 
-                      padding: '20px', 
-                      border: '1px solid var(--border)',
-                      textAlign: 'left'
+            {/* Quick POS Navigation pills */}
+            {lookupResult.meaningsList && lookupResult.meaningsList.length > 0 && (
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '20px', borderBottom: '1px solid var(--border)', paddingBottom: '12px' }}>
+                {Array.from(new Set(lookupResult.meaningsList.map(m => m.vietnamesePOS))).map((pos) => (
+                  <button
+                    key={pos}
+                    onClick={() => {
+                      const element = document.getElementById(`pos-${pos}`);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }}
+                    style={{
+                      padding: '4px 12px',
+                      borderRadius: '20px',
+                      border: '1px solid var(--accent)',
+                      backgroundColor: 'transparent',
+                      color: 'var(--accent)',
+                      fontSize: '12px',
+                      fontWeight: 700,
+                      cursor: 'pointer'
                     }}
                   >
-                    <span 
-                      style={{ 
-                        fontSize: '10px', 
-                        fontWeight: 800, 
-                        textTransform: 'uppercase', 
-                        backgroundColor: 'var(--accent-glow)', 
-                        color: 'var(--accent)', 
-                        padding: '4px 10px', 
-                        borderRadius: '20px',
-                        display: 'inline-block',
-                        marginBottom: '12px'
-                      }}
-                    >
-                      {m.vietnamesePOS} ({m.partOfSpeech})
-                    </span>
-
-                    <div style={{ marginBottom: m.exampleEnglish ? '12px' : '0' }}>
-                      <h4 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-bold)', margin: 0 }}>
-                        {m.vietnameseDefinition}
-                      </h4>
-                      <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '4px 0 0 0', fontStyle: 'italic' }}>
-                        {m.definition}
-                      </p>
-                    </div>
-
-                    {m.exampleEnglish && (
-                      <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '12px', marginTop: '12px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <p style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-bold)', fontStyle: 'italic', margin: 0 }}>
-                            "{m.exampleEnglish}"
-                          </p>
-                          <button 
-                            onClick={() => speak(m.exampleEnglish!)} 
-                            style={{ background: 'transparent', border: 'none', color: 'var(--accent)', cursor: 'pointer', padding: '2px', display: 'flex' }}
-                          >
-                            <Volume2 size={13} />
-                          </button>
-                        </div>
-                        {m.exampleVietnamese && (
-                          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px', fontWeight: 500, margin: '4px 0 0 0' }}>
-                            {m.exampleVietnamese}
-                          </p>
-                        )}
-                      </div>
-                    )}
-                  </div>
+                    {pos.toLowerCase()}
+                  </button>
                 ))}
               </div>
-            ) : (
-              /* Fallback simple view */
-              <>
-                <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
-                  <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
-                    Nghĩa tiếng Việt
-                  </span>
-                  <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)' }}>
-                    {lookupResult.vietnameseMeaning}
-                  </p>
-                </div>
-
-                {lookupResult.exampleEnglish && (
-                  <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '16px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <p style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-bold)', fontStyle: 'italic' }}>
-                        "{lookupResult.exampleEnglish}"
-                      </p>
-                      <button onClick={() => speak(lookupResult.exampleEnglish)} style={{ background: 'transparent', border: 'none', color: 'var(--accent)', cursor: 'pointer' }}>
-                        <Volume2 size={14} />
-                      </button>
-                    </div>
-                    {lookupResult.exampleVietnamese && (
-                      <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px', fontWeight: 500 }}>
-                        {lookupResult.exampleVietnamese}
-                      </p>
-                    )}
-                  </div>
-                )}
-              </>
             )}
+
+            {/* Word Header & UK/US pronuncation speakers */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+              <div>
+                <h2 className="font-heading" style={{ fontSize: '32px', fontWeight: 950, color: 'var(--text-bold)', margin: 0, textDecoration: 'underline' }}>
+                  {lookupResult.word}
+                </h2>
+                <span style={{ fontSize: '15px', color: 'var(--text-muted)', fontWeight: 600 }}>{lookupResult.ipa}</span>
+              </div>
+
+              <div style={{ display: 'flex', gap: '8px' }}>
+                {/* UK pronunciation */}
+                <button
+                  onClick={() => {
+                    if (lookupResult.audioUk) {
+                      new Audio(lookupResult.audioUk).play().catch(() => speak(lookupResult.word));
+                    } else {
+                      speak(lookupResult.word);
+                    }
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    backgroundColor: 'var(--accent-glow)',
+                    color: 'var(--accent)',
+                    border: 'none',
+                    padding: '8px 12px',
+                    borderRadius: '12px',
+                    fontSize: '12px',
+                    fontWeight: 800,
+                    cursor: 'pointer'
+                  }}
+                >
+                  <Volume2 size={14} />
+                  <span>UK</span>
+                </button>
+
+                {/* US pronunciation */}
+                <button
+                  onClick={() => {
+                    if (lookupResult.audioUs) {
+                      new Audio(lookupResult.audioUs).play().catch(() => speak(lookupResult.word));
+                    } else {
+                      speak(lookupResult.word);
+                    }
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    backgroundColor: 'var(--accent-glow)',
+                    color: 'var(--accent)',
+                    border: 'none',
+                    padding: '8px 12px',
+                    borderRadius: '12px',
+                    fontSize: '12px',
+                    fontWeight: 800,
+                    cursor: 'pointer'
+                  }}
+                >
+                  <Volume2 size={14} />
+                  <span>US</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Flat dictionary list grouped by Part of Speech */}
+            {lookupResult.meaningsList && lookupResult.meaningsList.length > 0 && (() => {
+              const groups: Record<string, typeof lookupResult.meaningsList> = {};
+              lookupResult.meaningsList.forEach(m => {
+                if (!groups[m.vietnamesePOS]) {
+                  groups[m.vietnamesePOS] = [];
+                }
+                groups[m.vietnamesePOS].push(m);
+              });
+
+              return (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                  {Object.keys(groups).map((posKey) => (
+                    <div key={posKey} id={`pos-${posKey}`} style={{ textAlign: 'left' }}>
+                      {/* Part of Speech Heading */}
+                      <h3 style={{ fontSize: '18px', fontWeight: 900, color: 'var(--text-bold)', borderBottom: '1px dashed var(--border)', paddingBottom: '4px', marginBottom: '12px', textDecoration: 'underline' }}>
+                        {posKey.toLowerCase()}
+                      </h3>
+
+                      {/* Meanings sub-items list */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingLeft: '8px' }}>
+                        {groups[posKey].map((m, idx) => (
+                          <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                            {/* Definition text prefixed with pink arrow */}
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                              <span style={{ color: '#d500f9', fontWeight: 900, fontSize: '16px' }}>⇨</span>
+                              <div>
+                                <span style={{ fontSize: '16px', fontWeight: 800, color: '#d500f9' }}>
+                                  {m.vietnameseDefinition}
+                                </span>
+                                <span style={{ fontSize: '13px', color: 'var(--text-muted)', display: 'block', fontStyle: 'italic', marginTop: '2px' }}>
+                                  {m.definition}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Context Example text */}
+                            {m.exampleEnglish && (
+                              <div style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                  <span style={{ color: '#1976d2', fontWeight: 900, fontSize: '11px' }}>▶</span>
+                                  <span 
+                                    style={{ fontSize: '14px', fontWeight: 700, color: '#1976d2', textDecoration: 'underline', cursor: 'pointer' }}
+                                    onClick={() => speak(m.exampleEnglish!)}
+                                  >
+                                    {m.exampleEnglish}
+                                  </span>
+                                </div>
+                                {m.exampleVietnamese && (
+                                  <span style={{ fontSize: '13px', color: 'var(--text-muted)', paddingLeft: '14px' }}>
+                                    {m.exampleVietnamese}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
         ) : (
           /* Empty Search placeholder state */
