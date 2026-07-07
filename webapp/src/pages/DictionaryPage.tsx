@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useVocabulary } from '../context/VocabularyContext';
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis';
 import { useDictionary } from '../hooks/useDictionary';
+import { findSpellingSuggestion } from '../utils/levenshtein';
 import { Search, Volume2, Save, ArrowLeft, Plus, Check, X } from 'lucide-react';
 
 export const DictionaryPage: React.FC = () => {
@@ -11,6 +12,17 @@ export const DictionaryPage: React.FC = () => {
   const [searchText, setSearchText] = useState('');
   const [showAddSheet, setShowAddSheet] = useState(false);
   const [savedSuccess, setSavedSuccess] = useState(false);
+  const [spellingSuggestion, setSpellingSuggestion] = useState<string | null>(null);
+
+  const handleSearch = (text: string) => {
+    if (!text.trim()) return;
+    
+    // Find closest spelling suggestion if typo detected
+    const suggestion = findSpellingSuggestion(text, allBaseWords);
+    setSpellingSuggestion(suggestion);
+    
+    lookup(text);
+  };
 
   // Form state for adding custom word manually
   const [newWord, setNewWord] = useState('');
@@ -40,17 +52,19 @@ export const DictionaryPage: React.FC = () => {
 
   const handleSuggestionClick = (word: string) => {
     setSearchText(word);
+    setSpellingSuggestion(null);
     lookup(word);
   };
 
   const handleSaveToCustom = () => {
     if (!lookupResult) return;
+    const mainMeaning = lookupResult.meaningsList?.[0];
     addCustomWord({
       word: lookupResult.word,
       ipa: lookupResult.ipa,
-      vietnameseMeaning: lookupResult.vietnameseMeaning,
-      exampleEnglish: lookupResult.exampleEnglish,
-      exampleVietnamese: lookupResult.exampleVietnamese,
+      vietnameseMeaning: mainMeaning ? mainMeaning.vietnameseDefinition : lookupResult.vietnameseMeaning,
+      exampleEnglish: mainMeaning ? (mainMeaning.exampleEnglish || '') : lookupResult.exampleEnglish,
+      exampleVietnamese: mainMeaning ? (mainMeaning.exampleVietnamese || '') : lookupResult.exampleVietnamese,
       topic: 'Tra từ điển',
       level: 'A1',
       symbolName: lookupResult.symbolName
@@ -129,7 +143,7 @@ export const DictionaryPage: React.FC = () => {
                 placeholder="Nhập từ tiếng Anh để tra cứu..."
                 value={searchText}
                 onChange={e => setSearchText(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && searchText.trim() && lookup(searchText)}
+                onKeyDown={e => e.key === 'Enter' && searchText.trim() && handleSearch(searchText)}
                 style={{
                   width: '100%',
                   padding: '12px 16px 12px 48px',
@@ -144,7 +158,7 @@ export const DictionaryPage: React.FC = () => {
             </div>
             
             <button
-              onClick={() => searchText.trim() && lookup(searchText)}
+              onClick={() => searchText.trim() && handleSearch(searchText)}
               className="font-heading"
               style={{
                 backgroundColor: 'var(--accent)',
@@ -160,6 +174,33 @@ export const DictionaryPage: React.FC = () => {
               Tra từ
             </button>
           </div>
+
+          {/* Spelling Suggestion Banner */}
+          {spellingSuggestion && (
+            <div className="glass animate-fade-in" style={{ borderRadius: '12px', padding: '12px 18px', border: '1px solid var(--border)', backgroundColor: 'var(--accent-glow)', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>✨ Có phải ý bạn là:</span>
+              <button
+                onClick={() => {
+                  setSearchText(spellingSuggestion);
+                  setSpellingSuggestion(null);
+                  lookup(spellingSuggestion);
+                }}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: 'var(--accent)',
+                  fontWeight: 750,
+                  fontSize: '13px',
+                  cursor: 'pointer',
+                  padding: 0,
+                  textDecoration: 'underline'
+                }}
+              >
+                {spellingSuggestion}
+              </button>
+              <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>?</span>
+            </div>
+          )}
 
           {/* Autocomplete suggestions list */}
           {!lookupResult && suggestions.length > 0 && (
@@ -253,33 +294,98 @@ export const DictionaryPage: React.FC = () => {
               </button>
             </div>
 
-            {/* Definition Block */}
-            <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
-              <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
-                Nghĩa tiếng Việt
-              </span>
-              <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)' }}>
-                {lookupResult.vietnameseMeaning}
-              </p>
-            </div>
+            {/* Detailed meanings list grouped by Parts of Speech */}
+            {lookupResult.meaningsList && lookupResult.meaningsList.length > 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' }}>
+                {lookupResult.meaningsList.map((m, idx) => (
+                  <div 
+                    key={idx} 
+                    style={{ 
+                      backgroundColor: 'var(--bg-tertiary)', 
+                      borderRadius: '16px', 
+                      padding: '20px', 
+                      border: '1px solid var(--border)',
+                      textAlign: 'left'
+                    }}
+                  >
+                    <span 
+                      style={{ 
+                        fontSize: '10px', 
+                        fontWeight: 800, 
+                        textTransform: 'uppercase', 
+                        backgroundColor: 'var(--accent-glow)', 
+                        color: 'var(--accent)', 
+                        padding: '4px 10px', 
+                        borderRadius: '20px',
+                        display: 'inline-block',
+                        marginBottom: '12px'
+                      }}
+                    >
+                      {m.vietnamesePOS} ({m.partOfSpeech})
+                    </span>
 
-            {/* Example sentence block */}
-            {lookupResult.exampleEnglish && (
-              <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <p style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-bold)', fontStyle: 'italic' }}>
-                    "{lookupResult.exampleEnglish}"
-                  </p>
-                  <button onClick={() => speak(lookupResult.exampleEnglish)} style={{ background: 'transparent', border: 'none', color: 'var(--accent)', cursor: 'pointer' }}>
-                    <Volume2 size={14} />
-                  </button>
-                </div>
-                {lookupResult.exampleVietnamese && (
-                  <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px', fontWeight: 500 }}>
-                    {lookupResult.exampleVietnamese}
-                  </p>
-                )}
+                    <div style={{ marginBottom: m.exampleEnglish ? '12px' : '0' }}>
+                      <h4 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-bold)', margin: 0 }}>
+                        {m.vietnameseDefinition}
+                      </h4>
+                      <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '4px 0 0 0', fontStyle: 'italic' }}>
+                        {m.definition}
+                      </p>
+                    </div>
+
+                    {m.exampleEnglish && (
+                      <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '12px', marginTop: '12px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <p style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-bold)', fontStyle: 'italic', margin: 0 }}>
+                            "{m.exampleEnglish}"
+                          </p>
+                          <button 
+                            onClick={() => speak(m.exampleEnglish!)} 
+                            style={{ background: 'transparent', border: 'none', color: 'var(--accent)', cursor: 'pointer', padding: '2px', display: 'flex' }}
+                          >
+                            <Volume2 size={13} />
+                          </button>
+                        </div>
+                        {m.exampleVietnamese && (
+                          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px', fontWeight: 500, margin: '4px 0 0 0' }}>
+                            {m.exampleVietnamese}
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
+            ) : (
+              /* Fallback simple view */
+              <>
+                <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
+                  <span style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
+                    Nghĩa tiếng Việt
+                  </span>
+                  <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)' }}>
+                    {lookupResult.vietnameseMeaning}
+                  </p>
+                </div>
+
+                {lookupResult.exampleEnglish && (
+                  <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '16px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <p style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-bold)', fontStyle: 'italic' }}>
+                        "{lookupResult.exampleEnglish}"
+                      </p>
+                      <button onClick={() => speak(lookupResult.exampleEnglish)} style={{ background: 'transparent', border: 'none', color: 'var(--accent)', cursor: 'pointer' }}>
+                        <Volume2 size={14} />
+                      </button>
+                    </div>
+                    {lookupResult.exampleVietnamese && (
+                      <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px', fontWeight: 500 }}>
+                        {lookupResult.exampleVietnamese}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </>
             )}
           </div>
         ) : (

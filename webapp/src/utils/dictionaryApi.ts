@@ -1,3 +1,12 @@
+export interface DictionaryMeaning {
+  partOfSpeech: string;
+  vietnamesePOS: string;
+  definition: string;
+  vietnameseDefinition: string;
+  exampleEnglish?: string;
+  exampleVietnamese?: string;
+}
+
 export interface LookupResult {
   word: string;
   ipa: string;
@@ -5,6 +14,7 @@ export interface LookupResult {
   exampleEnglish: string;
   exampleVietnamese: string;
   symbolName: string;
+  meaningsList: DictionaryMeaning[];
 }
 
 export async function translateText(text: string, from = 'en', to = 'vi'): Promise<string> {
@@ -26,7 +36,7 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
   const cleanWord = word.trim().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "");
   
   let ipa = '';
-  let exampleEnglish = '';
+  let meaningsList: DictionaryMeaning[] = [];
   
   try {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${cleanWord}`);
@@ -34,7 +44,7 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
       const data = await response.json();
       const entry = data[0];
       
-      // Resolve IPA
+      // Resolve IPA phonetic transcriptions
       if (entry.phonetic) {
         ipa = entry.phonetic;
       } else if (entry.phonetics && entry.phonetics.length > 0) {
@@ -42,18 +52,36 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
         if (withText) ipa = withText.text;
       }
 
-      // Find example sentence
-      if (entry.meanings) {
-        for (const meaning of entry.meanings) {
-          if (meaning.definitions) {
-            for (const def of meaning.definitions) {
-              if (def.example) {
-                exampleEnglish = def.example;
-                break;
+      // Parse meanings and translate definitions
+      if (entry.meanings && Array.isArray(entry.meanings)) {
+        for (const m of entry.meanings.slice(0, 3)) { // Top 3 parts of speech
+          const pos = m.partOfSpeech || 'other';
+          const viPOS = translatePOS(pos);
+          
+          if (m.definitions && Array.isArray(m.definitions)) {
+            for (const d of m.definitions.slice(0, 2)) { // Top 2 definitions per POS
+              const defText = d.definition;
+              const viDefText = await translateText(defText, 'en', 'vi');
+              
+              let exEn = d.example || '';
+              
+              // Generate smart descriptive context example if generic/empty
+              if (!exEn || exEn.split(' ').length < 4) {
+                exEn = generateSmartExample(cleanWord, pos);
               }
+              
+              const exVi = await translateText(exEn, 'en', 'vi');
+              
+              meaningsList.push({
+                partOfSpeech: pos,
+                vietnamesePOS: viPOS,
+                definition: defText,
+                vietnameseDefinition: viDefText,
+                exampleEnglish: exEn,
+                exampleVietnamese: exVi
+              });
             }
           }
-          if (exampleEnglish) break;
         }
       }
     }
@@ -61,25 +89,83 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
     console.error('Dictionary API lookup error:', error);
   }
 
-  // Google Translate the word
-  const vietnameseMeaning = await translateText(cleanWord, 'en', 'vi');
-
-  // Google Translate the example (if any)
-  let exampleVietnamese = '';
-  if (exampleEnglish) {
-    exampleVietnamese = await translateText(exampleEnglish, 'en', 'vi');
+  // Fallback if no definitions were successfully parsed
+  if (meaningsList.length === 0) {
+    const vietnameseMeaning = await translateText(cleanWord, 'en', 'vi');
+    const exEn = `It is interesting to study how ${cleanWord} functions in various contexts.`;
+    const exVi = await translateText(exEn, 'en', 'vi');
+    meaningsList.push({
+      partOfSpeech: 'other',
+      vietnamesePOS: 'Từ loại khác',
+      definition: cleanWord,
+      vietnameseDefinition: vietnameseMeaning || 'Chưa rõ nghĩa',
+      exampleEnglish: exEn,
+      exampleVietnamese: exVi
+    });
   }
 
+  const first = meaningsList[0];
   const symbolName = resolveSymbolName(cleanWord);
 
   return {
     word: cleanWord,
     ipa: ipa || '/.../',
-    vietnameseMeaning: vietnameseMeaning || 'Chưa rõ nghĩa',
-    exampleEnglish: exampleEnglish || `This is a sentence containing the word ${cleanWord}.`,
-    exampleVietnamese: exampleVietnamese || `Đây là câu ví dụ chứa từ ${cleanWord}.`,
+    vietnameseMeaning: first.vietnameseDefinition,
+    exampleEnglish: first.exampleEnglish || '',
+    exampleVietnamese: first.exampleVietnamese || '',
     symbolName,
+    meaningsList
   };
+}
+
+function translatePOS(pos: string): string {
+  const p = pos.toLowerCase();
+  if (p === 'noun') return 'Danh từ';
+  if (p === 'verb') return 'Động từ';
+  if (p === 'adjective') return 'Tính từ';
+  if (p === 'adverb') return 'Trạng từ';
+  if (p === 'pronoun') return 'Đại từ';
+  if (p === 'preposition') return 'Giới từ';
+  if (p === 'conjunction') return 'Liên từ';
+  if (p === 'interjection') return 'Thán từ';
+  return pos.charAt(0).toUpperCase() + pos.slice(1);
+}
+
+function generateSmartExample(word: string, pos: string): string {
+  const p = pos.toLowerCase();
+  if (p === 'noun') {
+    const templates = [
+      `The professor explained the complex concept of ${word} during the academic lecture.`,
+      `Scientists have discovered that ${word} plays an essential role in this experiment.`,
+      `We must evaluate the direct and long-term impact of ${word} on global development.`
+    ];
+    return templates[Math.floor(Math.random() * templates.length)];
+  }
+  if (p === 'verb') {
+    const templates = [
+      `It is vital to ${word} the instructions carefully before beginning the process.`,
+      `He attempted to ${word} his research findings to the committee members clearly.`,
+      `They decided to ${word} the infrastructure to improve overall productivity.`
+    ];
+    return templates[Math.floor(Math.random() * templates.length)];
+  }
+  if (p === 'adjective') {
+    const templates = [
+      `The manager made a ${word} choice that resolved the team's conflict immediately.`,
+      `This book provides a ${word} overview of international political relations.`,
+      `The results of the project showed a ${word} improvement in user satisfaction.`
+    ];
+    return templates[Math.floor(Math.random() * templates.length)];
+  }
+  if (p === 'adverb') {
+    const templates = [
+      `The engineer ${word} fixed the server issues before the major system launch.`,
+      `The team collaborated ${word} to complete the task ahead of the strict deadline.`,
+      `She explained the complex mathematical theory ${word} to the students.`
+    ];
+    return templates[Math.floor(Math.random() * templates.length)];
+  }
+  return `This research helps to demonstrate how ${word} influences behavior in different circumstances.`;
 }
 
 function resolveSymbolName(word: string): string {
@@ -96,6 +182,5 @@ function resolveSymbolName(word: string): string {
   if (w.includes('sun') || w.includes('day') || w.includes('weather') || w.includes('sky')) return 'sun.max.fill';
   if (w.includes('money') || w.includes('buy') || w.includes('sell') || w.includes('price')) return 'dollarsign.circle.fill';
   if (w.includes('time') || w.includes('clock') || w.includes('watch')) return 'clock.fill';
-  
   return 'pencil.circle.fill';
 }

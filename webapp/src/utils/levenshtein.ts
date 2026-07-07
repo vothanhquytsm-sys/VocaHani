@@ -55,3 +55,33 @@ export function evaluatePronunciation(target: string, transcript: string): { sco
 
   return { score, message };
 }
+
+export function findSpellingSuggestion(input: string, wordsList: string[]): string | null {
+  const cleanInput = input.trim().toLowerCase();
+  if (!cleanInput || wordsList.length === 0) return null;
+  
+  // If the word exists exactly, no suggestion is needed
+  if (wordsList.some(w => w.toLowerCase() === cleanInput)) {
+    return null;
+  }
+  
+  let bestMatch: string | null = null;
+  let minDistance = Infinity;
+  
+  for (const word of wordsList) {
+    const cleanWord = word.toLowerCase();
+    const dist = levenshteinDistance(cleanInput, cleanWord);
+    
+    // Typo thresholds:
+    // 1. Edits must be small (e.g. <= 3)
+    // 2. Edits must not exceed 35% of the target word length
+    const maxAllowedEdits = Math.max(2, Math.floor(cleanWord.length * 0.35));
+    
+    if (dist < minDistance && dist <= maxAllowedEdits) {
+      minDistance = dist;
+      bestMatch = word;
+    }
+  }
+  
+  return bestMatch;
+}
