@@ -33,6 +33,35 @@ export const ReadingDetailPage: React.FC<ReadingDetailPageProps> = ({ passageId,
 
   const [savedSuccess, setSavedSuccess] = useState(false);
 
+  // Group lookupResult meanings by partOfSpeech
+  const groupedMeanings = React.useMemo(() => {
+    if (!lookupResult || !lookupResult.meaningsList) return {};
+    const groups: { [pos: string]: { posVi: string; meanings: any[] } } = {};
+    lookupResult.meaningsList.forEach(m => {
+      const pos = m.partOfSpeech || 'other';
+      if (!groups[pos]) {
+        groups[pos] = {
+          posVi: m.vietnamesePOS,
+          meanings: []
+        };
+      }
+      groups[pos].meanings.push(m);
+    });
+    return groups;
+  }, [lookupResult]);
+
+  const getAbbreviatedPOS = (pos: string): string => {
+    const p = pos.toLowerCase().trim();
+    if (p === 'noun') return 'n';
+    if (p === 'verb') return 'v';
+    if (p === 'adjective') return 'adj';
+    if (p === 'adverb') return 'adv';
+    if (p === 'preposition') return 'prep';
+    if (p === 'pronoun') return 'pron';
+    if (p === 'conjunction') return 'conj';
+    return p;
+  };
+
   if (!passage) {
     return (
       <div style={{ textAlign: 'center', padding: '40px' }}>
@@ -305,23 +334,49 @@ export const ReadingDetailPage: React.FC<ReadingDetailPageProps> = ({ passageId,
             </div>
 
             {/* Translation Meaning */}
-            <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <div>
-                <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>
-                  Nghĩa tiếng Việt
-                </span>
-                <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)', textTransform: 'capitalize', margin: 0 }}>
-                  {lookupResult.vietnameseMeaning}
-                </p>
-              </div>
+            <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '16px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              {Object.keys(groupedMeanings).length > 0 ? (
+                Object.keys(groupedMeanings).map((posKey) => {
+                  const group = groupedMeanings[posKey];
+                  const abbreviatedPos = getAbbreviatedPOS(posKey);
+                  const posTranslation = group.meanings[0]?.vietnameseWordTranslation || lookupResult.vietnameseMeaning;
+                  
+                  return (
+                    <div key={posKey} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ 
+                          fontSize: '11px', 
+                          fontWeight: 800, 
+                          textTransform: 'uppercase', 
+                          color: 'var(--accent)', 
+                          backgroundColor: 'var(--accent-glow)',
+                          padding: '2px 6px',
+                          borderRadius: '4px'
+                        }}>
+                          {group.posVi} ({abbreviatedPos})
+                        </span>
+                        <p style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-bold)', textTransform: 'capitalize', margin: 0 }}>
+                          {posTranslation}
+                        </p>
+                      </div>
 
-              {lookupResult.meaningsList && lookupResult.meaningsList[0] && (
-                <div style={{ borderTop: '1px solid var(--border)', paddingTop: '8px' }}>
+                      <ul style={{ paddingLeft: '18px', margin: '4px 0 0', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                        {group.meanings.slice(0, 2).map((m: any, idx: number) => (
+                          <li key={idx} style={{ fontSize: '13px', color: 'var(--text)', fontStyle: 'italic', lineHeight: '1.4' }}>
+                            {m.definition}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })
+              ) : (
+                <div>
                   <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>
-                    Giải thích (English)
+                    Nghĩa tiếng Việt
                   </span>
-                  <p style={{ fontSize: '14px', fontWeight: 550, color: 'var(--text)', fontStyle: 'italic', lineHeight: '1.4', margin: 0 }}>
-                    {lookupResult.meaningsList[0].definition}
+                  <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)', textTransform: 'capitalize', margin: 0 }}>
+                    {lookupResult.vietnameseMeaning}
                   </p>
                 </div>
               )}

@@ -5,6 +5,7 @@ export interface DictionaryMeaning {
   vietnameseDefinition: string;
   exampleEnglish?: string;
   exampleVietnamese?: string;
+  vietnameseWordTranslation?: string;
 }
 
 export interface LookupResult {
@@ -71,11 +72,24 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
         }
       }
 
-      // Parse meanings and translate definitions
+       // Parse meanings and translate definitions
       if (entry.meanings && Array.isArray(entry.meanings)) {
         for (const m of entry.meanings.slice(0, 3)) { // Top 3 parts of speech
           const pos = m.partOfSpeech || 'other';
           const viPOS = translatePOS(pos);
+          
+          // Contextual POS-specific translation for this part of speech
+          let shortTranslation = '';
+          try {
+            const wordWithPOS = `${cleanWord} (${pos})`;
+            const translated = await translateText(wordWithPOS, 'en', 'vi');
+            shortTranslation = translated.replace(/\s*\([^)]*\)/g, "").trim();
+            if (shortTranslation) {
+              shortTranslation = shortTranslation.toLowerCase();
+            }
+          } catch (e) {
+            shortTranslation = '';
+          }
           
           if (m.definitions && Array.isArray(m.definitions)) {
             for (const d of m.definitions.slice(0, 2)) { // Top 2 definitions per POS
@@ -97,7 +111,8 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
                 definition: defText,
                 vietnameseDefinition: viDefText,
                 exampleEnglish: exEn,
-                exampleVietnamese: exVi
+                exampleVietnamese: exVi,
+                vietnameseWordTranslation: shortTranslation
               });
             }
           }
