@@ -18,6 +18,8 @@ interface VocabularyContextType {
   loading: boolean;
   user: { username: string; token: string } | null;
   albums: WordAlbum[];
+  ieltsProgress: any;
+  setIeltsProgress: React.Dispatch<React.SetStateAction<any>>;
   
   toggleLearned: (wordId: string) => void;
   toggleFavorite: (wordId: string) => void;
@@ -55,6 +57,18 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
       { id: 'default_album', name: 'Từ của tôi', description: 'Album từ vựng mặc định', symbolName: 'folder.fill', createdAt: new Date().toISOString() }
     ];
   });
+
+  // IELTS Progress State
+  const [ieltsProgress, setIeltsProgress] = useState<any>(() => {
+    const item = localStorage.getItem('voca_ielts_progress');
+    return item ? JSON.parse(item) : null;
+  });
+
+  useEffect(() => {
+    if (ieltsProgress) {
+      localStorage.setItem('voca_ielts_progress', JSON.stringify(ieltsProgress));
+    }
+  }, [ieltsProgress]);
 
   // Master lists loaded from public JSON assets
   const [baseWords, setBaseWords] = useState<Word[]>([]);
@@ -427,6 +441,7 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
           setPassedLessons(data.passedLessons || []);
           setCompletedReadings(data.completedReadings || {});
           setSrsMap(data.srsMap || {});
+          setIeltsProgress(data.ieltsProgress || null);
           setAlbums(data.albums && data.albums.length > 0 ? data.albums : [
             { id: 'default_album', name: 'Từ của tôi', description: 'Album từ vựng mặc định', symbolName: 'folder.fill', createdAt: new Date().toISOString() }
           ]);
@@ -458,6 +473,7 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             completedReadings,
             srsMap,
             albums,
+            ieltsProgress,
             customWords
           })
         });
@@ -471,7 +487,7 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     }, 1500);
 
     return () => clearTimeout(timer);
-  }, [user, learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, albums, customWords]);
+  }, [user, learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, albums, ieltsProgress, customWords]);
 
   return (
     <VocabularyContext.Provider
@@ -503,7 +519,9 @@ export const VocabularyProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         albums,
         addAlbum,
         deleteAlbum,
-        updateAlbum
+        updateAlbum,
+        ieltsProgress,
+        setIeltsProgress
       }}
     >
       {children}

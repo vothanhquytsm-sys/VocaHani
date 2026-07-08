@@ -30,6 +30,7 @@ async function pull(req, res) {
                 completed_readings: '{}',
                 srs_map: '{}',
                 albums: '[]',
+                ielts_progress: '{}',
                 updated_at: now
             };
         }
@@ -58,6 +59,7 @@ async function pull(req, res) {
             completedReadings: JSON.parse(progress.completed_readings || '{}'),
             srsMap: JSON.parse(progress.srs_map || '{}'),
             albums: JSON.parse(progress.albums || '[]'),
+            ieltsProgress: JSON.parse(progress.ielts_progress || '{}'),
             customWords,
             updatedAt: progress.updated_at
         });
@@ -71,15 +73,15 @@ async function push(req, res) {
     const userId = req.user?.id;
     if (!userId)
         return res.status(400).json({ error: 'Mã người dùng không hợp lệ.' });
-    const { learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, albums, customWords } = req.body;
+    const { learnedWordIds, favoriteWordIds, favoritePhraseIds, passedLessons, completedReadings, srsMap, albums, ieltsProgress, customWords } = req.body;
     try {
         const now = new Date().toISOString();
         // Use SQL transactions to bundle database modifications
         const syncTransaction = database_1.default.transaction(() => {
             // Update progress variables
             const updateProgress = database_1.default.prepare(`
-        INSERT INTO user_progress (user_id, learned_word_ids, favorite_word_ids, favorite_phrase_ids, passed_lessons, completed_readings, srs_map, albums, updated_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO user_progress (user_id, learned_word_ids, favorite_word_ids, favorite_phrase_ids, passed_lessons, completed_readings, srs_map, albums, ielts_progress, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(user_id) DO UPDATE SET
           learned_word_ids = excluded.learned_word_ids,
           favorite_word_ids = excluded.favorite_word_ids,
@@ -88,9 +90,10 @@ async function push(req, res) {
           completed_readings = excluded.completed_readings,
           srs_map = excluded.srs_map,
           albums = excluded.albums,
+          ielts_progress = excluded.ielts_progress,
           updated_at = excluded.updated_at
       `);
-            updateProgress.run(userId, JSON.stringify(learnedWordIds || []), JSON.stringify(favoriteWordIds || []), JSON.stringify(favoritePhraseIds || []), JSON.stringify(passedLessons || []), JSON.stringify(completedReadings || {}), JSON.stringify(srsMap || {}), JSON.stringify(albums || []), now);
+            updateProgress.run(userId, JSON.stringify(learnedWordIds || []), JSON.stringify(favoriteWordIds || []), JSON.stringify(favoritePhraseIds || []), JSON.stringify(passedLessons || []), JSON.stringify(completedReadings || {}), JSON.stringify(srsMap || {}), JSON.stringify(albums || []), JSON.stringify(ieltsProgress || {}), now);
             // Clean old custom words and write the synchronized list
             const deleteCustom = database_1.default.prepare('DELETE FROM user_custom_words WHERE user_id = ?');
             deleteCustom.run(userId);

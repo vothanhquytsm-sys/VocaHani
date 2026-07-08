@@ -44,6 +44,7 @@ db.exec(`
     completed_readings TEXT,
     srs_map TEXT,
     albums TEXT,
+    ielts_progress TEXT DEFAULT '{}',
     updated_at TEXT NOT NULL,
     FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
   );
@@ -53,6 +54,13 @@ db.exec(`
 try {
   db.exec("ALTER TABLE user_progress ADD COLUMN albums TEXT;");
   console.log("Successfully migrated database: added albums column to user_progress.");
+} catch (e) {
+  // Column already exists, ignore
+}
+
+try {
+  db.exec("ALTER TABLE user_progress ADD COLUMN ielts_progress TEXT DEFAULT '{}';");
+  console.log("Successfully migrated database: added ielts_progress column to user_progress.");
 } catch (e) {
   // Column already exists, ignore
 }

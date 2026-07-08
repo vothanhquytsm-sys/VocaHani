@@ -8,7 +8,11 @@ import {
   PenTool, 
   BarChart2,
   LogIn,
-  LogOut
+  LogOut,
+  Headphones,
+  Mic,
+  Activity,
+  FileText
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -140,6 +144,69 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, onLoginC
               >
                 <BarChart2 size={18} />
                 <span>Tiến trình & Học tập</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        {/* LUYỆN THI IELTS */}
+        <div style={{ marginTop: '16px' }}>
+          <h3 className="sidebar-section-title">
+            Luyện thi IELTS
+          </h3>
+          <ul className="sidebar-list">
+            <li>
+              <button
+                onClick={() => setPage({ type: 'ielts-dashboard' })}
+                className={`sidebar-btn ${isSelected('ielts-dashboard') ? 'active' : ''}`}
+              >
+                <LayoutGrid size={18} />
+                <span>Dashboard IELTS</span>
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setPage({ type: 'ielts-listening' })}
+                className={`sidebar-btn ${isSelected('ielts-listening') ? 'active' : ''}`}
+              >
+                <Headphones size={18} />
+                <span>Luyện nghe (Listening)</span>
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setPage({ type: 'ielts-reading' })}
+                className={`sidebar-btn ${isSelected('ielts-reading') ? 'active' : ''}`}
+              >
+                <BookOpen size={18} />
+                <span>Luyện đọc (Reading)</span>
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setPage({ type: 'ielts-speaking' })}
+                className={`sidebar-btn ${isSelected('ielts-speaking') ? 'active' : ''}`}
+              >
+                <Mic size={18} />
+                <span>Luyện nói AI (Speaking)</span>
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setPage({ type: 'ielts-writing' })}
+                className={`sidebar-btn ${isSelected('ielts-writing') ? 'active' : ''}`}
+              >
+                <FileText size={18} />
+                <span>Luyện viết AI (Writing)</span>
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setPage({ type: 'ielts-reflex' })}
+                className={`sidebar-btn ${isSelected('ielts-reflex') ? 'active' : ''}`}
+              >
+                <Activity size={18} />
+                <span>Phản xạ 100 câu (Reflex)</span>
               </button>
             </li>
           </ul>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { VocabularyProvider, useVocabulary } from './context/VocabularyContext';
+import { AppProvider } from './context/AppContext';
 import { Layout } from './components/Layout/Layout';
 import { AuthModal } from './components/AuthModal';
 import { TopicsPage } from './pages/TopicsPage';
@@ -15,6 +16,15 @@ import { DictionaryPage } from './pages/DictionaryPage';
 import { CustomWordsPage } from './pages/CustomWordsPage';
 import { StatisticsPage } from './pages/StatisticsPage';
 
+// Import IELTS views
+import { Dashboard } from './pages/Dashboard';
+import { Listening } from './pages/Listening';
+import { Reading } from './pages/Reading';
+import { Speaking } from './pages/Speaking';
+import { Reflex } from './pages/Reflex';
+import { Writing } from './pages/Writing';
+import { Vocabulary as IeltsVocabulary } from './pages/IeltsVocabulary';
+
 type ActivePage =
   | { type: 'topics'; topicName?: string }
   | { type: 'wordList'; topicName: string; lessonIndex: number }
@@ -27,7 +37,14 @@ type ActivePage =
   | { type: 'readingQuiz'; passageId: string }
   | { type: 'dictionary' }
   | { type: 'customWords' }
-  | { type: 'statistics' };
+  | { type: 'statistics' }
+  | { type: 'ielts-dashboard' }
+  | { type: 'ielts-listening' }
+  | { type: 'ielts-reading' }
+  | { type: 'ielts-speaking' }
+  | { type: 'ielts-writing' }
+  | { type: 'ielts-reflex' }
+  | { type: 'ielts-vocab' };
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<ActivePage>({ type: 'topics' });
@@ -85,6 +102,20 @@ function AppContent() {
         return <CustomWordsPage setPage={setCurrentPage} />;
       case 'statistics':
         return <StatisticsPage />;
+      case 'ielts-dashboard':
+        return <Dashboard />;
+      case 'ielts-listening':
+        return <Listening />;
+      case 'ielts-reading':
+        return <Reading />;
+      case 'ielts-speaking':
+        return <Speaking />;
+      case 'ielts-writing':
+        return <Writing />;
+      case 'ielts-reflex':
+        return <Reflex />;
+      case 'ielts-vocab':
+        return <IeltsVocabulary />;
       default:
         return <TopicsPage setPage={setCurrentPage} />;
     }
@@ -110,7 +141,9 @@ function AppContent() {
 function App() {
   return (
     <VocabularyProvider>
-      <AppContent />
+      <AppProvider>
+        <AppContent />
+      </AppProvider>
     </VocabularyProvider>
   );
 }

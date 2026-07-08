@@ -27,6 +27,7 @@ export async function pull(req: AuthenticatedRequest, res: Response) {
         completed_readings: '{}',
         srs_map: '{}',
         albums: '[]',
+        ielts_progress: '{}',
         updated_at: now
       };
     }
@@ -58,6 +59,7 @@ export async function pull(req: AuthenticatedRequest, res: Response) {
       completedReadings: JSON.parse(progress.completed_readings || '{}'),
       srsMap: JSON.parse(progress.srs_map || '{}'),
       albums: JSON.parse(progress.albums || '[]'),
+      ieltsProgress: JSON.parse(progress.ielts_progress || '{}'),
       customWords,
       updatedAt: progress.updated_at
     });
@@ -79,6 +81,7 @@ export async function push(req: AuthenticatedRequest, res: Response) {
     completedReadings, 
     srsMap, 
     albums,
+    ieltsProgress,
     customWords 
   } = req.body;
 
@@ -89,8 +92,8 @@ export async function push(req: AuthenticatedRequest, res: Response) {
     const syncTransaction = db.transaction(() => {
       // Update progress variables
       const updateProgress = db.prepare(`
-        INSERT INTO user_progress (user_id, learned_word_ids, favorite_word_ids, favorite_phrase_ids, passed_lessons, completed_readings, srs_map, albums, updated_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO user_progress (user_id, learned_word_ids, favorite_word_ids, favorite_phrase_ids, passed_lessons, completed_readings, srs_map, albums, ielts_progress, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(user_id) DO UPDATE SET
           learned_word_ids = excluded.learned_word_ids,
           favorite_word_ids = excluded.favorite_word_ids,
@@ -99,6 +102,7 @@ export async function push(req: AuthenticatedRequest, res: Response) {
           completed_readings = excluded.completed_readings,
           srs_map = excluded.srs_map,
           albums = excluded.albums,
+          ielts_progress = excluded.ielts_progress,
           updated_at = excluded.updated_at
       `);
       
@@ -111,6 +115,7 @@ export async function push(req: AuthenticatedRequest, res: Response) {
         JSON.stringify(completedReadings || {}),
         JSON.stringify(srsMap || {}),
         JSON.stringify(albums || []),
+        JSON.stringify(ieltsProgress || {}),
         now
       );
 
