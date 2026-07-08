@@ -123,13 +123,16 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
     });
   }
 
+  // Translate the word itself to get a concise Vietnamese meaning
+  const conciseVietnamese = await translateText(cleanWord, 'en', 'vi');
+
   const first = meaningsList[0];
   const symbolName = resolveSymbolName(cleanWord);
 
   return {
     word: cleanWord,
     ipa: ipa || '/.../',
-    vietnameseMeaning: first.vietnameseDefinition,
+    vietnameseMeaning: conciseVietnamese || first.vietnameseDefinition,
     exampleEnglish: first.exampleEnglish || '',
     exampleVietnamese: first.exampleVietnamese || '',
     symbolName,

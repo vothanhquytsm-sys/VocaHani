@@ -305,13 +305,26 @@ export const ReadingDetailPage: React.FC<ReadingDetailPageProps> = ({ passageId,
             </div>
 
             {/* Translation Meaning */}
-            <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '16px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>
-                Nghĩa dịch
-              </span>
-              <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)' }}>
-                {lookupResult.vietnameseMeaning}
-              </p>
+            <div style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: '16px', padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div>
+                <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>
+                  Nghĩa tiếng Việt
+                </span>
+                <p style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-bold)', textTransform: 'capitalize', margin: 0 }}>
+                  {lookupResult.vietnameseMeaning}
+                </p>
+              </div>
+
+              {lookupResult.meaningsList && lookupResult.meaningsList[0] && (
+                <div style={{ borderTop: '1px solid var(--border)', paddingTop: '8px' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>
+                    Giải thích (English)
+                  </span>
+                  <p style={{ fontSize: '14px', fontWeight: 550, color: 'var(--text)', fontStyle: 'italic', lineHeight: '1.4', margin: 0 }}>
+                    {lookupResult.meaningsList[0].definition}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Example sentence */}
