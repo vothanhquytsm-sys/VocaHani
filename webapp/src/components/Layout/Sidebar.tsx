@@ -12,7 +12,9 @@ import {
   Headphones,
   Mic,
   Activity,
-  FileText
+  FileText,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -23,6 +25,14 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, onLoginClick }) => {
   const { words, user, logoutUser } = useVocabulary();
+  const [isTopicsExpanded, setIsTopicsExpanded] = React.useState(false);
+
+  // Auto-expand topics in sidebar if a specific topic is active
+  React.useEffect(() => {
+    if (currentPage.type === 'topics' && currentPage.topicName) {
+      setIsTopicsExpanded(true);
+    }
+  }, [currentPage]);
   
   // Extract unique sorted topics
   const topics = React.useMemo(() => {
@@ -70,16 +80,39 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, onLoginC
           </h3>
           <ul className="sidebar-list">
             <li>
-              <button
-                onClick={() => setPage({ type: 'topics' })}
-                className={`sidebar-btn ${isSelected('topics') && !currentPage.topicName ? 'active' : ''}`}
-              >
-                <LayoutGrid size={18} />
-                <span>Tất cả chủ đề</span>
-              </button>
+              <div style={{ display: 'flex', alignItems: 'center', width: '100%', gap: '4px' }}>
+                <button
+                  onClick={() => setPage({ type: 'topics' })}
+                  className={`sidebar-btn ${isSelected('topics') && !currentPage.topicName ? 'active' : ''}`}
+                  style={{ flex: 1 }}
+                >
+                  <LayoutGrid size={18} />
+                  <span>Tất cả chủ đề</span>
+                </button>
+                <button
+                  onClick={() => setIsTopicsExpanded(prev => !prev)}
+                  style={{
+                    background: 'var(--bg-secondary)',
+                    border: '1px solid var(--border)',
+                    borderRadius: '8px',
+                    color: 'var(--text)',
+                    cursor: 'pointer',
+                    padding: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transition: 'background-color 0.2s'
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.backgroundColor = 'var(--bg-tertiary)'}
+                  onMouseLeave={e => e.currentTarget.style.backgroundColor = 'var(--bg-secondary)'}
+                  title={isTopicsExpanded ? "Thu gọn chủ đề" : "Mở rộng chủ đề"}
+                >
+                  {isTopicsExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                </button>
+              </div>
             </li>
             
-            {topics.map(topic => (
+            {isTopicsExpanded && topics.map(topic => (
               <li key={topic}>
                 <button
                   onClick={() => setPage({ type: 'topics', topicName: topic })}
