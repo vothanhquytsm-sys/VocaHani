@@ -47,73 +47,78 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${cleanWord}`);
     if (response.ok) {
       const data = await response.json();
-      const entry = data[0];
       
-      // Resolve IPA phonetic transcriptions & audio pronunciations (UK vs US)
-      if (entry.phonetic) {
-        ipa = entry.phonetic;
-      } else if (entry.phonetics && entry.phonetics.length > 0) {
-        const withText = entry.phonetics.find((p: any) => p.text);
+      // Resolve IPA phonetic transcriptions from first entry
+      const firstEntry = data[0];
+      if (firstEntry.phonetic) {
+        ipa = firstEntry.phonetic;
+      } else if (firstEntry.phonetics && firstEntry.phonetics.length > 0) {
+        const withText = firstEntry.phonetics.find((p: any) => p.text);
         if (withText) ipa = withText.text;
       }
 
-      if (entry.phonetics && Array.isArray(entry.phonetics)) {
-        for (const p of entry.phonetics) {
-          if (p.audio) {
-            if (p.audio.includes('-uk') || p.audio.endsWith('uk.mp3')) {
-              audioUk = p.audio;
-            } else if (p.audio.includes('-us') || p.audio.endsWith('us.mp3')) {
-              audioUs = p.audio;
-            } else {
-              if (!audioUs) audioUs = p.audio;
-              else if (!audioUk) audioUk = p.audio;
+      // Collect audio from all entries
+      for (const entry of data) {
+        if (entry.phonetics && Array.isArray(entry.phonetics)) {
+          for (const p of entry.phonetics) {
+            if (p.audio) {
+              if (p.audio.includes('-uk') || p.audio.endsWith('uk.mp3')) {
+                if (!audioUk) audioUk = p.audio;
+              } else if (p.audio.includes('-us') || p.audio.endsWith('us.mp3')) {
+                if (!audioUs) audioUs = p.audio;
+              } else {
+                if (!audioUs) audioUs = p.audio;
+                else if (!audioUk) audioUk = p.audio;
+              }
             }
           }
         }
       }
 
-       // Parse meanings and translate definitions
-      if (entry.meanings && Array.isArray(entry.meanings)) {
-        for (const m of entry.meanings.slice(0, 3)) { // Top 3 parts of speech
-          const pos = m.partOfSpeech || 'other';
-          const viPOS = translatePOS(pos);
-          
-          // Contextual POS-specific translation for this part of speech
-          let shortTranslation = '';
-          try {
-            const wordWithPOS = `${cleanWord} (${pos})`;
-            const translated = await translateText(wordWithPOS, 'en', 'vi');
-            shortTranslation = translated.replace(/\s*\([^)]*\)/g, "").trim();
-            if (shortTranslation) {
-              shortTranslation = shortTranslation.toLowerCase();
-            }
-          } catch (e) {
-            shortTranslation = '';
-          }
-          
-          if (m.definitions && Array.isArray(m.definitions)) {
-            for (const d of m.definitions.slice(0, 2)) { // Top 2 definitions per POS
-              const defText = d.definition;
-              const viDefText = await translateText(defText, 'en', 'vi');
-              
-              let exEn = d.example || '';
-              
-              // Generate smart descriptive context example if generic/empty
-              if (!exEn || exEn.split(' ').length < 4) {
-                exEn = generateSmartExample(cleanWord, pos);
+      // Parse meanings from all entries
+      for (const entry of data) {
+        if (entry.meanings && Array.isArray(entry.meanings)) {
+          for (const m of entry.meanings.slice(0, 3)) { // Top 3 parts of speech per entry
+            const pos = m.partOfSpeech || 'other';
+            const viPOS = translatePOS(pos);
+            
+            // Contextual POS-specific translation for this part of speech
+            let shortTranslation = '';
+            try {
+              const wordWithPOS = `${cleanWord} (${pos})`;
+              const translated = await translateText(wordWithPOS, 'en', 'vi');
+              shortTranslation = translated.replace(/\s*\([^)]*\)/g, "").trim();
+              if (shortTranslation) {
+                shortTranslation = shortTranslation.toLowerCase();
               }
-              
-              const exVi = await translateText(exEn, 'en', 'vi');
-              
-              meaningsList.push({
-                partOfSpeech: pos,
-                vietnamesePOS: viPOS,
-                definition: defText,
-                vietnameseDefinition: viDefText,
-                exampleEnglish: exEn,
-                exampleVietnamese: exVi,
-                vietnameseWordTranslation: shortTranslation
-              });
+            } catch (e) {
+              shortTranslation = '';
+            }
+            
+            if (m.definitions && Array.isArray(m.definitions)) {
+              for (const d of m.definitions.slice(0, 2)) { // Top 2 definitions per POS
+                const defText = d.definition;
+                const viDefText = await translateText(defText, 'en', 'vi');
+                
+                let exEn = d.example || '';
+                
+                // Generate smart descriptive context example if generic/empty
+                if (!exEn || exEn.split(' ').length < 4) {
+                  exEn = generateSmartExample(cleanWord, pos);
+                }
+                
+                const exVi = await translateText(exEn, 'en', 'vi');
+                
+                meaningsList.push({
+                  partOfSpeech: pos,
+                  vietnamesePOS: viPOS,
+                  definition: defText,
+                  vietnameseDefinition: viDefText,
+                  exampleEnglish: exEn,
+                  exampleVietnamese: exVi,
+                  vietnameseWordTranslation: shortTranslation
+                });
+              }
             }
           }
         }

@@ -456,31 +456,72 @@ export const DictionaryPage: React.FC = () => {
                 groups[m.vietnamesePOS].push(m);
               });
 
+              const getAbbreviatedPOS = (pos: string): string => {
+                const p = pos.toLowerCase().trim();
+                if (p === 'noun') return 'n';
+                if (p === 'verb') return 'v';
+                if (p === 'adjective') return 'adj';
+                if (p === 'adverb') return 'adv';
+                if (p === 'preposition') return 'prep';
+                if (p === 'pronoun') return 'pron';
+                if (p === 'conjunction') return 'conj';
+                return p;
+              };
+
               return (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                  {Object.keys(groups).map((posKey) => (
-                    <div key={posKey} id={`pos-${posKey}`} style={{ textAlign: 'left' }}>
-                      {/* Part of Speech Heading */}
-                      <h3 style={{ fontSize: '18px', fontWeight: 900, color: 'var(--text-bold)', borderBottom: '1px dashed var(--border)', paddingBottom: '4px', marginBottom: '12px', textDecoration: 'underline' }}>
-                        {posKey.toLowerCase()}
-                      </h3>
+                  {Object.keys(groups).map((posKey) => {
+                    const firstMeaning = groups[posKey][0];
+                    const rawPos = firstMeaning?.partOfSpeech || '';
+                    const abbreviatedPos = getAbbreviatedPOS(rawPos);
+                    const posTranslation = firstMeaning?.vietnameseWordTranslation || lookupResult.vietnameseMeaning;
 
-                      {/* Meanings sub-items list */}
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingLeft: '8px' }}>
-                        {groups[posKey].map((m, idx) => (
-                          <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                            {/* Definition text prefixed with pink arrow */}
-                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                              <span style={{ color: '#d500f9', fontWeight: 900, fontSize: '16px' }}>⇨</span>
-                              <div>
-                                <span style={{ fontSize: '16px', fontWeight: 800, color: '#d500f9' }}>
-                                  {m.vietnameseDefinition}
-                                </span>
-                                <span style={{ fontSize: '13px', color: 'var(--text-muted)', display: 'block', fontStyle: 'italic', marginTop: '2px' }}>
-                                  {m.definition}
-                                </span>
+                    return (
+                      <div key={posKey} id={`pos-${posKey}`} style={{ textAlign: 'left' }}>
+                        {/* Part of Speech Heading with Tag and Translation */}
+                        <h3 style={{ 
+                          fontSize: '18px', 
+                          fontWeight: 900, 
+                          color: 'var(--text-bold)', 
+                          borderBottom: '1px dashed var(--border)', 
+                          paddingBottom: '6px', 
+                          marginBottom: '14px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}>
+                          <span style={{ 
+                            fontSize: '12px', 
+                            fontWeight: 800, 
+                            textTransform: 'uppercase', 
+                            color: 'var(--accent)', 
+                            backgroundColor: 'var(--accent-glow)',
+                            padding: '2px 8px',
+                            borderRadius: '6px'
+                          }}>
+                            {posKey.toLowerCase()} ({abbreviatedPos})
+                          </span>
+                          <span style={{ color: 'var(--text-bold)', textTransform: 'capitalize' }}>
+                            : {posTranslation}
+                          </span>
+                        </h3>
+
+                        {/* Meanings sub-items list */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingLeft: '8px' }}>
+                          {groups[posKey].map((m, idx) => (
+                            <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                              {/* Definition text: English explanation first, Vietnamese translated explanation below */}
+                              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                <span style={{ color: '#d500f9', fontWeight: 900, fontSize: '16px' }}>⇨</span>
+                                <div>
+                                  <span style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-bold)', fontStyle: 'italic' }}>
+                                    {m.definition}
+                                  </span>
+                                  <span style={{ fontSize: '13px', color: 'var(--text-muted)', display: 'block', marginTop: '2px' }}>
+                                    ({m.vietnameseDefinition})
+                                  </span>
+                                </div>
                               </div>
-                            </div>
 
                             {/* Context Example text */}
                             {m.exampleEnglish && (
@@ -503,9 +544,10 @@ export const DictionaryPage: React.FC = () => {
                             )}
                           </div>
                         ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               );
             })()}
