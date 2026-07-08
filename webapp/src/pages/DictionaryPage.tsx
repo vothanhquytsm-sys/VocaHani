@@ -3,6 +3,7 @@ import { useVocabulary } from '../context/VocabularyContext';
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis';
 import { useDictionary } from '../hooks/useDictionary';
 import { findSpellingSuggestion } from '../utils/levenshtein';
+import { translateText } from '../utils/dictionaryApi';
 import { Search, Volume2, Save, ArrowLeft, Plus, Check, X } from 'lucide-react';
 
 export const DictionaryPage: React.FC = () => {
@@ -13,15 +14,40 @@ export const DictionaryPage: React.FC = () => {
   const [showAddSheet, setShowAddSheet] = useState(false);
   const [savedSuccess, setSavedSuccess] = useState(false);
   const [spellingSuggestion, setSpellingSuggestion] = useState<string | null>(null);
+  
+  const [searchMode, setSearchMode] = useState<'en-vi' | 'vi-en'>('en-vi');
+  const [searchedViWord, setSearchedViWord] = useState<string | null>(null);
+  const [loadingViEn, setLoadingViEn] = useState(false);
 
-  const handleSearch = (text: string) => {
+  const handleSearch = async (text: string) => {
     if (!text.trim()) return;
     
-    // Find closest spelling suggestion if typo detected
-    const suggestion = findSpellingSuggestion(text, allBaseWords);
-    setSpellingSuggestion(suggestion);
+    let searchWord = text.trim();
+    if (searchMode === 'vi-en') {
+      setLoadingViEn(true);
+      try {
+        const translated = await translateText(searchWord, 'vi', 'en');
+        if (translated) {
+          searchWord = translated.trim();
+          setSearchedViWord(text.trim());
+        }
+      } catch (e) {
+        console.error('Vietnamese translation failed:', e);
+      } finally {
+        setLoadingViEn(false);
+      }
+    } else {
+      setSearchedViWord(null);
+    }
+
+    if (searchMode === 'en-vi') {
+      const suggestion = findSpellingSuggestion(searchWord, allBaseWords);
+      setSpellingSuggestion(suggestion);
+    } else {
+      setSpellingSuggestion(null);
+    }
     
-    lookup(text);
+    lookup(searchWord);
   };
 
   // Form state for adding custom word manually
@@ -134,13 +160,59 @@ export const DictionaryPage: React.FC = () => {
         
         {/* Search & Suggestions Column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {/* Toggle Search Mode */}
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '4px' }}>
+            <button
+              onClick={() => {
+                setSearchMode('en-vi');
+                setSearchText('');
+                setLookupResult(null);
+                setSearchedViWord(null);
+              }}
+              style={{
+                padding: '6px 14px',
+                borderRadius: '8px',
+                border: '1px solid ' + (searchMode === 'en-vi' ? 'var(--accent)' : 'var(--border)'),
+                backgroundColor: searchMode === 'en-vi' ? 'var(--accent-glow)' : 'var(--bg-secondary)',
+                color: searchMode === 'en-vi' ? 'var(--accent)' : 'var(--text-muted)',
+                fontSize: '12px',
+                fontWeight: 800,
+                cursor: 'pointer',
+                transition: 'all 0.2s'
+              }}
+            >
+              Từ điển Anh - Việt
+            </button>
+            <button
+              onClick={() => {
+                setSearchMode('vi-en');
+                setSearchText('');
+                setLookupResult(null);
+                setSearchedViWord(null);
+              }}
+              style={{
+                padding: '6px 14px',
+                borderRadius: '8px',
+                border: '1px solid ' + (searchMode === 'vi-en' ? 'var(--accent)' : 'var(--border)'),
+                backgroundColor: searchMode === 'vi-en' ? 'var(--accent-glow)' : 'var(--bg-secondary)',
+                color: searchMode === 'vi-en' ? 'var(--accent)' : 'var(--text-muted)',
+                fontSize: '12px',
+                fontWeight: 800,
+                cursor: 'pointer',
+                transition: 'all 0.2s'
+              }}
+            >
+              Từ điển Việt - Anh
+            </button>
+          </div>
+
           {/* Custom Search Input */}
           <div className="glass" style={{ borderRadius: '16px', padding: '16px', border: '1px solid var(--border)', display: 'flex', gap: '12px' }}>
             <div style={{ position: 'relative', flex: 1 }}>
               <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
               <input
                 type="text"
-                placeholder="Nhập từ tiếng Anh để tra cứu..."
+                placeholder={searchMode === 'en-vi' ? "Nhập từ tiếng Anh để tra cứu..." : "Nhập từ tiếng Việt để tra cứu..."}
                 value={searchText}
                 onChange={e => setSearchText(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && searchText.trim() && handleSearch(searchText)}
@@ -159,6 +231,7 @@ export const DictionaryPage: React.FC = () => {
             
             <button
               onClick={() => searchText.trim() && handleSearch(searchText)}
+              disabled={loading || loadingViEn}
               className="font-heading"
               style={{
                 backgroundColor: 'var(--accent)',
@@ -168,12 +241,23 @@ export const DictionaryPage: React.FC = () => {
                 borderRadius: '12px',
                 fontWeight: 700,
                 fontSize: '14px',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                opacity: (loading || loadingViEn) ? 0.6 : 1
               }}
             >
-              Tra từ
+              {loadingViEn ? 'Đang dịch...' : loading ? 'Đang tra...' : 'Tra từ'}
             </button>
           </div>
+
+          {/* Vietnamese search translation info banner */}
+          {searchedViWord && lookupResult && (
+            <div className="glass animate-fade-in" style={{ borderRadius: '12px', padding: '12px 18px', border: '1px solid var(--border)', backgroundColor: 'var(--accent-glow)', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span style={{ fontSize: '15px' }}>🔍</span>
+              <span style={{ fontSize: '13px', color: 'var(--text-bold)', fontWeight: 600 }}>
+                Tìm kiếm: <strong>"{searchedViWord}"</strong> tương đương tiếng Anh là: <strong>"{lookupResult.word}"</strong>
+              </span>
+            </div>
+          )}
 
           {/* Spelling Suggestion Banner */}
           {spellingSuggestion && (
@@ -203,7 +287,7 @@ export const DictionaryPage: React.FC = () => {
           )}
 
           {/* Autocomplete suggestions list */}
-          {!lookupResult && suggestions.length > 0 && (
+          {searchMode === 'en-vi' && !lookupResult && suggestions.length > 0 && (
             <div className="glass" style={{ borderRadius: '16px', border: '1px solid var(--border)', overflow: 'hidden', textAlign: 'left' }}>
               {suggestions.map(s => (
                 <button
