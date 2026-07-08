@@ -74,7 +74,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, onLoginC
       {/* Navigation Links */}
       <div className="app-sidebar-content">
         {/* CHỦ ĐỀ HỌC TẬP */}
-        <div>
+        <div style={{ marginBottom: '24px' }}>
           <h3 className="sidebar-section-title">
             Chủ đề học tập
           </h3>
@@ -129,7 +129,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, onLoginC
         </div>
 
         {/* TIỆN ÍCH */}
-        <div>
+        <div style={{ marginBottom: '24px' }}>
           <h3 className="sidebar-section-title">
             Tiện ích
           </h3>
@@ -183,7 +183,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, onLoginC
         </div>
 
         {/* LUYỆN THI IELTS */}
-        <div style={{ marginTop: '16px' }}>
+        <div style={{ marginBottom: '24px' }}>
           <h3 className="sidebar-section-title">
             Luyện thi IELTS
           </h3>
