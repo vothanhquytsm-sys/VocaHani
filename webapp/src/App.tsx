@@ -49,7 +49,66 @@ type ActivePage =
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<ActivePage>({ type: 'topics' });
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const { loginUser } = useVocabulary();
+  const { loginUser, loading } = useVocabulary();
+
+  if (loading) {
+    return (
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'var(--bg)',
+        gap: '24px'
+      }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '48px 40px',
+          borderRadius: '24px',
+          backgroundColor: 'var(--bg-secondary)',
+          border: '1px solid var(--border)',
+          boxShadow: 'var(--card-shadow)',
+          maxWidth: '380px',
+          width: '90%',
+          textAlign: 'center',
+          animation: 'pulseGlow 2.5s infinite ease-in-out'
+        }}>
+          <img 
+            src="/logo.png" 
+            alt="VocaHani Logo" 
+            style={{ 
+              height: '96px', 
+              objectFit: 'contain',
+              marginBottom: '28px',
+              animation: 'float 3s infinite ease-in-out'
+            }} 
+          />
+          
+          <div style={{
+            width: '36px',
+            height: '36px',
+            border: '4px solid var(--border)',
+            borderTopColor: 'var(--accent)',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite',
+            marginBottom: '20px'
+          }} />
+          
+          <h2 className="font-heading" style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-bold)', margin: '0 0 8px 0' }}>
+            VocaHani
+          </h2>
+          <p style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 650, margin: 0, lineHeight: 1.4 }}>
+            Đang tải dữ liệu bài học vựng,<br />vui lòng chờ trong giây lát...
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   const renderActivePage = () => {
     switch (currentPage.type) {

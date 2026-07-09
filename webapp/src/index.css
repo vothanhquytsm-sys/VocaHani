@@ -102,7 +102,6 @@ body {
   background: var(--text-muted);
 }
 
-/* Animations */
 @keyframes pulseGlow {
   0%, 100% {
     transform: scale(1);
@@ -111,6 +110,12 @@ body {
   50% {
     transform: scale(1.08);
     opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

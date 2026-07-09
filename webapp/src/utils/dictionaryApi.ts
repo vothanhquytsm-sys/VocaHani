@@ -35,8 +35,41 @@ export async function translateText(text: string, from = 'en', to = 'vi'): Promi
   }
 }
 
+const DICTIONARY_CACHE_KEY = 'vocahani_dict_cache_v2';
+let dictionaryCache: Record<string, LookupResult> = {};
+
+// Load cache from localStorage on startup
+try {
+  const cachedData = localStorage.getItem(DICTIONARY_CACHE_KEY);
+  if (cachedData) {
+    dictionaryCache = JSON.parse(cachedData);
+  }
+} catch (e) {
+  console.error('Failed to load dictionary cache:', e);
+}
+
+function saveCacheToStorage() {
+  try {
+    const keys = Object.keys(dictionaryCache);
+    // Limit cache size to 150 entries to avoid localStorage storage limits
+    if (keys.length > 150) {
+      const keysToRemove = keys.slice(0, keys.length - 150);
+      keysToRemove.forEach(k => delete dictionaryCache[k]);
+    }
+    localStorage.setItem(DICTIONARY_CACHE_KEY, JSON.stringify(dictionaryCache));
+  } catch (e) {
+    console.error('Failed to save dictionary cache:', e);
+  }
+}
+
 export async function lookupDictionary(word: string): Promise<LookupResult> {
   const cleanWord = word.trim().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "");
+  const cacheKey = cleanWord.toLowerCase().trim();
+
+  if (dictionaryCache[cacheKey]) {
+    console.log(`[Cache Hit] Returning cached dictionary result for: ${cacheKey}`);
+    return dictionaryCache[cacheKey];
+  }
   
   let ipa = '';
   let meaningsList: DictionaryMeaning[] = [];
@@ -149,7 +182,7 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
   const first = meaningsList[0];
   const symbolName = resolveSymbolName(cleanWord);
 
-  return {
+  const result: LookupResult = {
     word: cleanWord,
     ipa: ipa || '/.../',
     vietnameseMeaning: conciseVietnamese || first.vietnameseDefinition,
@@ -160,6 +193,12 @@ export async function lookupDictionary(word: string): Promise<LookupResult> {
     audioUk,
     audioUs
   };
+
+  // Save to cache
+  dictionaryCache[cacheKey] = result;
+  saveCacheToStorage();
+
+  return result;
 }
 
 function translatePOS(pos: string): string {
