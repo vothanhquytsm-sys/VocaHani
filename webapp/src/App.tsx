@@ -78,26 +78,23 @@ function AppContent() {
           textAlign: 'center',
           animation: 'pulseGlow 2.5s infinite ease-in-out'
         }}>
-          <img 
-            src="/logo.png" 
-            alt="VocaHani Logo" 
-            style={{ 
-              height: '96px', 
-              objectFit: 'contain',
-              marginBottom: '28px',
-              animation: 'float 3s infinite ease-in-out'
-            }} 
+          <video
+            src="/splash_loading.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: '140px',
+              height: '140px',
+              borderRadius: '24px',
+              objectFit: 'cover',
+              marginBottom: '24px',
+              boxShadow: '0 8px 24px var(--accent-glow)',
+              border: '2px solid var(--border)',
+              backgroundColor: 'var(--bg-tertiary)'
+            }}
           />
-          
-          <div style={{
-            width: '36px',
-            height: '36px',
-            border: '4px solid var(--border)',
-            borderTopColor: 'var(--accent)',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite',
-            marginBottom: '20px'
-          }} />
           
           <h2 className="font-heading" style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-bold)', margin: '0 0 8px 0' }}>
             VocaHani
